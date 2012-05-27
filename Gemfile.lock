@@ -1,0 +1,28 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    addressable (2.2.8)
+    excon (0.13.4)
+    heroku (2.26.2)
+      heroku-api (~> 0.2.1)
+      launchy (>= 0.3.2)
+      netrc (~> 0.7.2)
+      rest-client (~> 1.6.1)
+      rubyzip
+    heroku-api (0.2.1)
+      excon (~> 0.13.3)
+    launchy (2.1.0)
+      addressable (~> 2.2.6)
+    mime-types (1.18)
+    netrc (0.7.2)
+    rack (1.4.1)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    rubyzip (0.9.8)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  heroku
+  rack
