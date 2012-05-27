@@ -13,8 +13,8 @@
 
 	<meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="css/frame.css">
-	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/frame.css">
+	<link rel="stylesheet" href="/css/style.css">
 
 	<script src="js/libs/modernizr-2.5.3.min.js"></script>
 </head>
@@ -24,115 +24,58 @@
 </header>
 <div id="main" role="main">
   <ul id="nav">
-    <li><a href="#intro" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
-      <li><a href="#second" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
-      <li><a href="#third" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
-      <li><a href="#fourth" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+    <li><a href="#intro" title="Next Section"><img src="/img/dot.png" alt="Link" /></a></li>
+    <li><a href="#second" title="Next Section"><img src="/img/dot.png" alt="Link" /></a></li>
+    <li><a href="#third" title="Next Section"><img src="/img/dot.png" alt="Link" /></a></li>
+    <li><a href="#fourth" title="Next Section"><img src="/img/dot.png" alt="Link" /></a></li>
   </ul>
-  
-  <section class="window">
-    <div class="story">
-
-    </div>
-  </section>
-  
+ 
   <section class="content">
     <div class="story">
 
     </div>
   </section>
-  
-  <section class="window">
-    <div class="story">
-     
-    </div>
-  </section>
-  
+ 
   <section class="content">
     <div class="story">
        
     </div>
   </section>
 
-  <section class="window">
-    <div class="story">
-     
-    </div>
-  </section>
-
-
   <section class="content">
     <div class="story">
      
     </div>
   </section>
 
-  <section class="window">
-    <div class="story">
-     
-    </div>
-  </section>
-
-
-  <section class="content">
-    <div class="story">
-     
-    </div>
-  </section>
-
-  <section class="window">
-    <div class="story">
-     
-    </div>
-  </section>
-
-
-  <section class="content">
-    <div class="story">
-     
-    </div>
-  </section>
-
-  <section class="window">
-    <div class="story">
-     
-    </div>
-  </section>
-
-
-  <section class="content">
-    <div class="story">
-     
-    </div>
-  </section>
 </div>
 <footer>
 
 </footer>
 
-<script src="js/libs/jquery-1.7.2.min.js"></script>
+<script src="/js/libs/jquery-1.7.2.min.js"></script>
 
-<script src="js/plugins.js"></script>
-<script src="js/script.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/script.js"></script>
 
 <script type="text/javascript">
-    $(document).ready(function(){
-      $('#nav').localScroll();
+    // $(document).ready(function(){
+    //   $('#nav').localScroll();
       
-      RepositionNav();
+    //   RepositionNav();
       
-      $(window).resize(function(){
-        RepositionNav();
-      }); 
+    //   $(window).resize(function(){
+    //     RepositionNav();
+    //   }); 
       
-      //.parallax(xPosition, adjuster, inertia, outerHeight) options:
-      //xPosition - Horizontal position of the element
-      //adjuster - y position to start from
-      //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
-      //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-      $('#main').parallax("50%", 0, 0.09, true);
+    //   //.parallax(xPosition, adjuster, inertia, outerHeight) options:
+    //   //xPosition - Horizontal position of the element
+    //   //adjuster - y position to start from
+    //   //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+    //   //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+    //   $('body').parallax("50%", 0, 0.4, false);
 
-    })
-    </script>
+    // })
+</script>
 </body>
 </html>

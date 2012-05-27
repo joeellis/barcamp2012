@@ -1,93 +1,62 @@
-body{
-  margin: 0;
+body {
+  margin: 0px auto;
   min-width: 980px;
-  padding: 0;
-}
+  padding-top: 200px;
+  background-color: #46bfee; }
 
-p{
-  margin: 0 0 20px 0; 
-}
+p {
+  margin: 0 0 20px 0; }
 
-p, ul{
-  font-family:"Proxima Nova Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-size-adjust:0.488;
-  font-weight:200;
-  font-style:normal;
-}
+p, ul {
+  font-family: "Proxima Nova Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size-adjust: 0.488;
+  font-weight: 200;
+  font-style: normal; }
 
-img{
-  border: 0;
-}
+img {
+  border: 0; }
 
-h1, #pixels{
-  font-family:"Museo 900", Verdana, serif;
-  font-size-adjust:0.40;
-  font-weight:700;
-  font-style:normal;
-}
+h1, #pixels {
+  font-family: "Museo 900", Verdana, serif;
+  font-size-adjust: 0.40;
+  font-weight: 700;
+  font-style: normal; }
 
-h2{
-  font-family:"Beau Sans Pro Book", Verdana, sans-serif;
-  font-size-adjust:0.531;
-  font-weight:500;
-  font-style:normal;
-}
+h2 {
+  font-family: "Beau Sans Pro Book", Verdana, sans-serif;
+  font-size-adjust: 0.531;
+  font-weight: 500;
+  font-style: normal; }
 
-#header h1, #pixels{
-  color: #48941A;
-}
+#header h1, #pixels {
+  color: #48941A; }
 
-#nav{
+#nav {
   list-style: none;
   position: fixed;
-  right: 20px;
-}
+  right: 20px; }
 
-#nav li{
-  margin: 0 0 15px 0; 
-}
+#nav li {
+  margin: 0 0 15px 0; }
 
-#header, #intro, #second{
-  width: 100%;
-}
+#header {
+  width: 100%; }
 
 #main {
-  background:url(../images/background.jpg) 50% -75px no-repeat fixed;
-}
-
-#intro{
-  color: white;
-  height: 600px;
-  margin: 0 auto;
-  padding: 160px 0 0 0;
-}
-
-/*#second{
-  background: #fff;
-  color: white;
-  height: 700px;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 0;
-}*/
-
-.window {
-  color: white;
-  height: 650px;
-  padding: 100px 0 0 0; 
-}
+  background: #46bfee url(/img/building.png) no-repeat top center;
+  height: 5430px;
+  padding-top: 700px;
+  position: relative; }
 
 .content {
   background: #fff;
-  /*width:800px;*/
-  height: 400px;
-  margin: 0 auto;
-  padding: 40px 0 0 0;
-}
+  width: 800px;
+  height: 300px;
+  margin: 0px auto;
+  margin-bottom: 600px; }
 
-.story{
+.story {
   margin: 0 auto;
   min-width: 980px;
   overflow: auto;
-  width: 980px;
-}
+  width: 980px; }

@@ -1,0 +1,75 @@
+body{
+  margin: 0px auto;
+  min-width: 980px;
+  padding-top: 200px;
+  background-color: #46bfee;
+}
+
+p{
+  margin: 0 0 20px 0; 
+}
+
+p, ul{
+  font-family:"Proxima Nova Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size-adjust:0.488;
+  font-weight:200;
+  font-style:normal;
+}
+
+img{
+  border: 0;
+}
+
+h1, #pixels{
+  font-family:"Museo 900", Verdana, serif;
+  font-size-adjust:0.40;
+  font-weight:700;
+  font-style:normal;
+}
+
+h2{
+  font-family:"Beau Sans Pro Book", Verdana, sans-serif;
+  font-size-adjust:0.531;
+  font-weight:500;
+  font-style:normal;
+}
+
+#header h1, #pixels{
+  color: #48941A;
+}
+
+#nav{
+  list-style: none;
+  position: fixed;
+  right: 20px;
+}
+
+#nav li{
+  margin: 0 0 15px 0; 
+}
+
+#header {
+  width: 100%;
+}
+
+#main {
+  background:#46bfee url(/img/building.png) no-repeat top center; 
+  height:5430px;
+  padding-top: 700px;
+  position: relative;
+}
+
+.content {
+  background: #fff;
+  width:800px;
+  height: 300px;
+  margin: 0px auto;
+  margin-bottom: 600px;
+}
+
+.story{
+  margin: 0 auto;
+  min-width: 980px;
+  overflow: auto;
+  width: 980px;
+}

@@ -34,31 +34,40 @@ function RepositionNav(){
 (function( $ ){
   $.fn.parallax = function(xpos, adjuster, inertia, outerHeight) {
       
-    function inView(pos, element){
+    function inView(pos, element) {
       
       element.each(function(){ //for each selector, determine whether it's inview and run the move() function
         
         var element = $(this);
         var top = element.offset().top;
         
-        if(outerHeight == true){
+        if(outerHeight == true) {
           var height = element.outerHeight(true);
-        }else{
+        }
+        else {
           var height = element.height();
         }
         
         //above & in view
         if(top + height >= pos && top + height - windowHeight < pos){
+          console.log("above");
+          console.log(top);
+          console.log(height);
+          console.log(pos);
+          console.log(windowHeight);
+          console.log("-------------")
           move(pos, height);
         }
             
         //full view
         if(top <= pos && (top + height) >= pos && (top - windowHeight) < pos && top + height - windowHeight > pos){
+          console.log("full");
           move(pos, height);
         }
         
         //below & in view
         if(top + height > pos && top - windowHeight < pos && top > pos){
+          console.log("below");
           move(pos, height);
         }
       });
@@ -80,13 +89,17 @@ function RepositionNav(){
     
     function newPos(xpos, windowHeight, pos, adjuster, inertia){
       pixels = Math.round((-((windowHeight + pos) - adjuster) * inertia))
-      pixels = pixels + 100;
+      // pixels = pixels + 100;
+      // console.log(windowHeight);
+      // console.log(pos);
+      // console.log(adjuster);
+      // console.log(inertia);
       return xpos + " " + pixels + "px";
     }
     
     //function to be called whenever the window is scrolled or resized
     function move(pos, height){ 
-        $this.css({'backgroundPosition': newPos(xpos, height, pos, adjuster, inertia)}); 
+      $this.css({'backgroundPosition': newPos(xpos, height, pos, adjuster, inertia)}); 
     }
     
     $window.bind('scroll', function(){ //when the user is scrolling...

@@ -1,4 +1,4 @@
 source "http://rubygems.org"
 
-gem 'rack'
-gem 'heroku'
+gem "sass"
+gem "rack"
