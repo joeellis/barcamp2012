@@ -16,10 +16,10 @@ Questions
 ### How do I set this thing up on development?
 
 This app is the absolute most basic ruby app that I could make, but it is in fact a Ruby app.  If you know Ruby, then all you need to do is run the following:
-  
-  `gem install bundler`
-  `bundle install`
-  `rackup`
+
+  gem install bundler
+  bundle install
+  rackup
 
 And then just go to `localhost:9292` and you should see the site up and in action
 
