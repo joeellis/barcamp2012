@@ -1,42 +1,36 @@
 body{
   margin: 0px auto;
   min-width: 980px;
-  padding-top: 200px;
+  padding-top: 30px;
   background-color: #46bfee;
 }
 
 p{
-  margin: 0 0 20px 0; 
+  margin: 0 0 20px 0;
+  line-height: 26px;
 }
 
-p, ul{
-  font-family:"Proxima Nova Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-size-adjust:0.488;
-  font-weight:200;
-  font-style:normal;
+h1, h2, h3 {
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
 }
 
-img{
-  border: 0;
+h1 {
+  font-size: 48px;
+  text-shadow: 0px 5px 5px rgba(0,0,0,0.1);
 }
 
-h1, #pixels{
-  font-family:"Museo 900", Verdana, serif;
-  font-size-adjust:0.40;
-  font-weight:700;
-  font-style:normal;
+h2 {
+  font-size: 35px;
+  text-shadow: 0px 5px 5px rgba(0,0,0,0.1);
 }
 
-h2{
-  font-family:"Beau Sans Pro Book", Verdana, sans-serif;
-  font-size-adjust:0.531;
-  font-weight:500;
-  font-style:normal;
+h3 {
+  font-size: 28px;
 }
 
-#header h1, #pixels{
-  color: #48941A;
-}
 
 #nav{
   list-style: none;
@@ -61,15 +55,19 @@ h2{
 
 .content {
   background: #fff;
-  width:800px;
-  height: 300px;
+  width:600px;
+  padding:10px;
   margin: 0px auto;
   margin-bottom: 600px;
+  background-color: #000;
 }
 
 .story{
   margin: 0 auto;
-  min-width: 980px;
   overflow: auto;
-  width: 980px;
+  padding: 20px;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  border:1px solid #fff;
 }
