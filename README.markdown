@@ -29,6 +29,10 @@ To make changes to the styles, edit `public/css/styles.scss` and re-compile the 
 
 To edit javascript, just edit what's in public. Boom!
 
+#### Is there a way to access each window on the building?
+
+There is a grid of absolutely positioned divs that overlay each window. There are 22 rows, and 7 columns. Each window will have a css class of "rowX" and "colY" (for example, to access in scss: .row15.col6 )
+
 #### I can do the Rubies
 
 Then you can `rackup config.ru`, can't you? Visit localhost:9292 to join in the fun.
