@@ -37,7 +37,7 @@ h3 {
   width: 100%; }
 
 #main {
-  background: #46bfee url(/img/building.png) no-repeat top center;
+  background: #46bfee url(../img/building.png) no-repeat top center;
   height: 5430px;
   padding-top: 700px;
   position: relative; }
