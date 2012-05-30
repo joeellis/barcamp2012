@@ -9,7 +9,7 @@ var height = 116;
 var left_width = 88;
 var right_width = 85;
 
-var template = "<div class='window'>&nbsp;Test</div>";
+var template = "<div class='window'>&nbsp;</div>";
 
 $(document).ready(function(){
 

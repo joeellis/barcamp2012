@@ -62,5 +62,5 @@ h3 {
 .window {
   position: absolute;
   background: transparent;
-  border: 1px solid black;
+  /*  border: 1px solid black; */
   display: block; }
