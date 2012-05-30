@@ -59,8 +59,51 @@ h3 {
   font-size: 14px;
   border: 1px solid #fff; }
 
-.window {
+#windowPanes {
   position: absolute;
-  background: transparent;
-  /*  border: 1px solid black; */
-  display: block; }
+  top: 860px;
+  left: 50%;
+  margin-left: -259px;
+  height: 2500px;
+  width: 603px; }
+  #windowPanes .row {
+    height: 90px;
+    margin-bottom: 26px;
+    position: relative; }
+    #windowPanes .row .pane {
+      height: 100%;
+      position: absolute; }
+      #windowPanes .row .pane.col0, #windowPanes .row .pane.col1, #windowPanes .row .pane.col2 {
+        width: 71px; }
+      #windowPanes .row .pane.col3, #windowPanes .row .pane.col4, #windowPanes .row .pane.col5, #windowPanes .row .pane.col6 {
+        width: 65px; }
+      #windowPanes .row .pane.col0 {
+        left: 0;
+        top: 12px; }
+      #windowPanes .row .pane.col1 {
+        left: 91px;
+        top: 6px; }
+      #windowPanes .row .pane.col2 {
+        left: 182px;
+        top: 0; }
+      #windowPanes .row .pane.col3 {
+        right: 249px;
+        top: 0; }
+      #windowPanes .row .pane.col4 {
+        right: 166px;
+        top: 4px; }
+      #windowPanes .row .pane.col5 {
+        right: 83px;
+        top: 8px; }
+      #windowPanes .row .pane.col6 {
+        right: 0;
+        top: 12px; }
+
+#paneContents {
+  display: none; }
+
+#helloWorld {
+  font-family: monospace;
+  font-size: 12px;
+  text-align: center;
+  padding: 20px 0 0 2px; }
