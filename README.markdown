@@ -15,13 +15,23 @@ Questions
 
 ### How do I set this thing up on development?
 
-This app is the absolute most basic ruby app that I could make, but it is in fact a Ruby app.  If you know Ruby, then all you need to do is run the following:
+The app runs in production on Ruby, but can be run straight from the filesystem. Just open public/index.html.
 
-  gem install bundler
-  bundle install
-  rackup
+#### HTML
 
-And then just go to `localhost:9292` and you should see the site up and in action
+To make changes to the HTML, just edit `public/index.html`.
+
+#### Stylesheets
+
+To make changes to the styles, edit `public/css/styles.scss` and re-compile the stylesheet using [SASS](http://sass-lang.com/). We'd love a contribution for how to do this on windows.
+
+#### Javascript
+
+To edit javascript, just edit what's in public. Boom!
+
+#### I can do the Rubies
+
+Then you can `rackup config.ru`, can't you? Visit localhost:9292 to join in the fun.
 
 ### What's the best way to submit a contribution?
 
