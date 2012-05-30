@@ -72,9 +72,68 @@ h3 {
   border:1px solid #fff;
 }
 
-.window{
+#windowPanes {
   position: absolute;
-  background: transparent;
-/*  border: 1px solid black; */
-  display: block; 
+  top: 860px;
+  left: 50%;
+  margin-left: -259px;
+  height: 2500px;
+  width: 603px;
+  .row {
+    height: 90px;
+    margin-bottom: 26px;
+    position: relative;
+    .pane {
+      height: 100%;
+      position: absolute;
+      $leftColWidth: 71px;
+      $leftColOffsetWidth: 91px;
+      $rightColWidth: 65px;
+      $rightColOffsetWidth: 83px;
+      &.col0, &.col1, &.col2 {
+        width: $leftColWidth;
+      }
+      &.col3, &.col4, &.col5, &.col6 {
+        width: $rightColWidth;
+      }
+      &.col0 {
+        left: 0;
+        top: 12px;
+      }
+      &.col1 {
+        left: $leftColOffsetWidth;
+        top: 6px;
+      }
+      &.col2 {
+        left: $leftColOffsetWidth * 2;
+        top: 0;
+      }
+      &.col3 {
+        right: $rightColOffsetWidth * 3;
+        top: 0;
+      }
+      &.col4 {
+        right: $rightColOffsetWidth * 2;
+        top: 4px;
+      }
+      &.col5 {
+        right: $rightColOffsetWidth;
+        top: 8px;
+      }
+      &.col6 {
+        right: 0;
+        top: 12px;
+      }
+    }
+  }
+}
+#paneContents {
+  display: none;
+}
+
+#helloWorld {
+  font-family: monospace;
+  font-size: 12px;
+  text-align: center;
+  padding: 20px 0 0 2px;
 }
