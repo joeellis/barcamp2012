@@ -23,6 +23,10 @@ This app is the absolute most basic ruby app that I could make, but it is in fac
 
 And then just go to `localhost:9292` and you should see the site up and in action
 
+### What if I don't have Ruby installed?
+
+No problem, come see Joe Ellis at Hack Night on Tuesdays at 7pm at Launchpad and I will help you get setup.  It's not terribly difficult, but much easier than writing it out.
+
 ### What's the best way to submit a contribution?
 
 Please use this repro and submit all contributions on a separate branch via Github's Pull Request feature.  If you have no idea what this means at all, then come see me, Joe Ellis, at Hack Night on Tuesdays at 7pm at Launchpad and I will help you through it.
