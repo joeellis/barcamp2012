@@ -1,7 +1,18 @@
 WELCOME TO BARCAMPNOLA 2012 WEBSITE
 =============
 
-Hello, and thank you for possibly thinking about contributing to our BarCampNOLA 2012 website.  The whole goal of this project is to try and get people to contribute to a larger project so they can feel happy and proud of themselves that they made something great.  The other goal is to use a lot of dinosaurs and video game text for seemingly no reason.
+Hello, and thank you for possibly thinking about contributing to our BarCampNOLA 2012 website.  
+
+
+The Goal (in order)
+-------------
+
+1. Try and get people who normally keep to themselves to come out and help contribute to a singular project.  
+
+2. To see new faces around the New Orleans tech circles and make some connections.
+
+3. Use a lot of dinosaurs and video game text for seemingly no reason.
+
 
 Rules
 -------------
