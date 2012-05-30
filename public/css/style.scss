@@ -18,7 +18,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 60px;
   text-shadow: 0px 5px 5px rgba(0,0,0,0.1);
 }
 
@@ -49,20 +49,20 @@ h3 {
 #main {
   background:url(../img/building.png) no-repeat top center;
   height:5430px;
-  padding-top: 700px;
+  padding-top: 560px;
   position: relative;
 }
 
 .content {
   background: #fff;
-  width:600px;
+  width:548px;
   padding:10px;
   margin: 0px auto;
   margin-bottom: 600px;
   background-color: #000;
 }
 
-.story{
+.story {
   margin: 0 auto;
   overflow: auto;
   padding: 20px;
@@ -70,6 +70,15 @@ h3 {
   font-family: 'Press Start 2P', cursive;
   font-size: 14px;
   border:1px solid #fff;
+}
+
+.columns {
+  width: 1085px;
+  margin: 0 auto;
+
+  .content {
+    width:515px;
+  }
 }
 
 .window{
