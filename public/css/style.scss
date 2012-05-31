@@ -182,6 +182,24 @@ h3 {
 #helicopter-0 {
   position: absolute;
   top: 300px;
-  right: 50%;
-  margin-right: -300px;
+  right: 0px;
+  // right: 50%;
+  // margin-right: -300px;
+}
+
+#helicopter-1 {
+  position: absolute;
+  top: 400px;
+  right: -150px;
+  // right: 50%;
+  // margin-right: -300px;
+}
+
+#helicopter-2 {
+  position: absolute;
+  z-index: -1;
+  top: 250px;
+  right: -50px;
+  // right: 50%;
+  // margin-right: -300px;
 }
