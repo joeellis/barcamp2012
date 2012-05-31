@@ -5,7 +5,7 @@ Hello, and thank you for possibly thinking about contributing to our BarCampNOLA
 
 Rules
 -------------
-- Keep your racism / pornography / racy stuff to yourself
+- Keep your racism / sexism / infantilism / pornography / racy stuff to yourself
 - The site must not be slow to run / load
 - Anything added to the site must not immediately interfere with the BarCampNOLA event info on load (if someone triggers an event that does so though, it's ok)
 
