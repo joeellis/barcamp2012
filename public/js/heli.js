@@ -6,7 +6,11 @@ $(document).ready(function(){
 function moveHeli() {
   var self = this;
   width = $(window).outerWidth();
-  $(".helicopter").animate({right:width}, 3000, function() {
-    $(this).css("right", 0);
+
+  $(".helicopter").each(function(index, element) {
+    $original = $(element).clone();
+    $(element).animate({right:width}, 3000, function() {
+      $(this).css("right", $original.css("right"));
+    });
   });
 }
