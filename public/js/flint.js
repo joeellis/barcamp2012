@@ -5,7 +5,9 @@ $(document).ready(function() {
   $("a#flint").click(function (e) {
     e.preventDefault();
     $("#main").append(iFrame);
-    iFrame.slideDown("slow");
+    iFrame.slideDown("slow", function () {
+      $("html, body").animate({ scrollTop: iFrame.offset().top + "px"}, 500)
+    });
     key.setScope("flint");
   });
 });
