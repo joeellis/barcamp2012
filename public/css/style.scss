@@ -2,7 +2,7 @@ body{
   margin: 0px auto;
   min-width: 980px;
   padding-top: 30px;
-  background-color: #f5ac3a;
+  background-color: #6fbcfe;
 }
 
 p{
@@ -46,38 +46,54 @@ h3 {
   width: 100%;
 }
 
+
+.trex {
+  z-index: 0;
+  position: relative;
+  left: 50%;
+
+  .image {
+    position: absolute;
+    top: -6px;
+    left: -346px;
+    background: url(../img/trex.png) no-repeat top center;
+    width: 693px;
+    height: 554px;
+  }
+}
+
+
 #main {
   background:url(../img/building.png) no-repeat top center;
   height:5430px;
   padding-top: 560px;
   position: relative;
-}
-
-.content {
-  background: #fff;
-  width:548px;
-  padding:10px;
-  margin: 0px auto;
-  margin-bottom: 600px;
-  background-color: #000;
-}
-
-.story {
-  margin: 0 auto;
-  overflow: auto;
-  padding: 20px;
-  color: #fff;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 14px;
-  border:1px solid #fff;
-}
-
-.columns {
-  width: 1085px;
-  margin: 0 auto;
 
   .content {
-    width:515px;
+    width:548px;
+    padding:10px;
+    margin: 0px auto;
+    margin-bottom: 600px;
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .story {
+    margin: 0 auto;
+    overflow: auto;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    border:1px solid #fff;
+  }
+
+  .columns {
+    width: 1085px;
+    margin: 0 auto;
+
+    .content {
+      width:515px;
+    }
   }
 }
 
