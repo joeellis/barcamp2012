@@ -5,9 +5,10 @@ Hello, and thank you for possibly thinking about contributing to our BarCampNOLA
 
 Rules
 -------------
-- Keep your racism / sexism / infantilism / pornography / racy stuff to yourself.  If you aren't sure whether or not something should be added in, it means it shouldn't be added in.  Just use good judgement! 
-- The site must not be slow to run / load
-- Anything added to the site must not immediately interfere with the BarCampNOLA event info on load (if someone triggers an event that does so though, it's ok)
+- Don't feel you need to ask permission if you have an idea, just go ahead and contribute!  No contribution is too small.  We review all the patches, so if there is an issue, it'll be brought up there.  Feel free to submit work-in-progress pull requests as well if you'd like to get some comments beforehand.
+- That being said: Keep your racism / sexism / infantilism / pornography / racy stuff to yourself.  **If you aren't sure whether or not something should be added in, it means it probably shouldn't be added in.**  We try to be very lenient, but we do need to draw lines at some point, so just use good judgment! 
+- The site must not be slow to run / load, keep that in mind if you're thinking of contributing something heavy.
+- Anything added to the site must not immediately interfere with the BarCampNOLA event info / details on load (if someone triggers an event that does so though, we're ok with that). 
 
 
 Questions
