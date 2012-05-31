@@ -3,7 +3,7 @@ WELCOME TO BARCAMPNOLA 2012 WEBSITE
 
 Hello, and thank you for possibly thinking about contributing to our BarCampNOLA 2012 website.  The whole goal of this project is to try and get people to contribute to a larger project so they can feel happy and proud of themselves that they made something great.  The other goal is to use a lot of dinosaurs and video game text for seemingly no reason.
 
-Rules
+Rules (very easy rules, so take a minute to read please)
 -------------
 - Don't feel you need to ask permission if you have an idea, just go ahead and contribute!  No contribution is too small.  We review all the patches, so if there is an issue, it'll be brought up there.  Feel free to submit work-in-progress pull requests as well if you'd like to get some comments beforehand.
 - That being said: Keep your racism / sexism / infantilism / pornography / racy stuff to yourself.  **If you aren't sure whether or not something should be added in, it means it probably shouldn't be added in.**  We try to be very lenient, but we do need to draw lines at some point, so just use good judgment! 
