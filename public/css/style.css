@@ -120,3 +120,15 @@ h3 {
   overflow: hidden; }
   #hatWobble img {
     margin-left: -30px; }
+
+.helicopter {
+  background-image: url("../img/helicopter.gif");
+  width: 67px;
+  height: 45px;
+  position: absolute; }
+
+#helicopter-0 {
+  position: absolute;
+  top: 300px;
+  right: 50%;
+  margin-right: -300px; }
