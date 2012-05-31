@@ -1,16 +1,16 @@
 $(document).ready(function(){
-  moveHeli();
-  setInterval(moveHeli, 3000);
+  $(".helicopter").each(function(index, element) {
+    right = $(element).clone().css("right").replace("px","");
+    moveHeli($(element), right);
+  });
 });
 
-function moveHeli() {
+function moveHeli($element, $right) {
   var self = this;
   width = $(window).outerWidth();
 
-  $(".helicopter").each(function(index, element) {
-    $original = $(element).clone();
-    $(element).animate({right:width}, 3000, function() {
-      $(this).css("right", $original.css("right"));
-    });
+  $element.animate({right:width + 3000}, 27000, function() {
+    $element.css("right", $right);
+    moveHeli($element, $right);
   });
 }

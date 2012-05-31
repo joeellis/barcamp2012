@@ -1,8 +1,14 @@
+html {
+  overflow-x:hidden;
+}
+
 body{
   margin: 0px auto;
   min-width: 980px;
   padding-top: 50px;
   background-color: #6fbcfe;
+  overflow-x:hidden;
+  position: relative;
 }
 
 p{
@@ -50,6 +56,7 @@ h3 {
 .trex {
   z-index: 0;
   position: relative;
+  width: 638px;
   left: 50%;
 
   .image {
@@ -181,25 +188,22 @@ h3 {
 
 #helicopter-0 {
   position: absolute;
-  top: 300px;
-  right: 0px;
-  // right: 50%;
-  // margin-right: -300px;
+  top: 500px;
+  right: -350px;
+  z-index: 5;
 }
 
 #helicopter-1 {
   position: absolute;
-  top: 400px;
-  right: -150px;
-  // right: 50%;
-  // margin-right: -300px;
+  top: 600px;
+  right: -450px;
+  z-index: 5;
 }
 
 #helicopter-2 {
   position: absolute;
   z-index: -1;
-  top: 250px;
-  right: -50px;
-  // right: 50%;
-  // margin-right: -300px;
+  top: 350px;
+  right: -400px;
+  z-index: -1;
 }
