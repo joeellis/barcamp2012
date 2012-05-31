@@ -5,7 +5,7 @@ Hello, and thank you for possibly thinking about contributing to our BarCampNOLA
 
 Rules
 -------------
-- Keep your racism / sexism / infantilism / pornography / racy stuff to yourself.  If you aren't sure whether or not something should be added in, it means it shouldn't be added in.  Just use good judgement!
+- Keep your racism / sexism / infantilism / pornography / racy stuff to yourself.  If you aren't sure whether or not something should be added in, it means it shouldn't be added in.  Just use good judgement! 
 - The site must not be slow to run / load
 - Anything added to the site must not immediately interfere with the BarCampNOLA event info on load (if someone triggers an event that does so though, it's ok)
 
