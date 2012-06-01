@@ -58,7 +58,8 @@ h3 {
   background: url(../img/building.png) no-repeat top center;
   height: 5430px;
   padding-top: 560px;
-  position: relative; }
+  position: relative;
+  z-index: 50; }
   #main .content {
     width: 548px;
     padding: 10px;
