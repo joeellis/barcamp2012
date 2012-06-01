@@ -7,7 +7,7 @@ $(document).ready(function () {
   $(".helicopter").each(function (idx, el) {
     var el = $(el);
     var fn = function () {
-      var interval = 800 * Math.random() + 500;
+      var interval = 800 * Math.random() + 1500;
       var radius   = 120 * Math.random() + 50;
       var offset = el.offset();
       var rand = Math.random();
