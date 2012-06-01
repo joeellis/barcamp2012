@@ -32,7 +32,7 @@ To edit javascript, just edit what's in public. Boom!
 
 #### Is there a way to access each window on the building?
 
-There is a grid of absolutely positioned divs that overlay each window. There are 22 rows, and 7 columns. To set the contents of a window pane, put your HTML element inside the ```windowPanes``` div, and set the ```data-pane-id``` to ```pane-x-y``` based on the row and column index of the pane, like so:
+There is a grid of absolutely positioned divs that overlay each window. There are 26 rows and 7 columns. To set the contents of a window pane, put your HTML element inside the ```windowPanes``` div, and set the ```data-pane-id``` to ```pane-x-y``` based on the row and column index of the pane, like so:
 ```html
 <div id="paneContents">
   <div id="helloWorld" data-pane-id="pane-0-6">

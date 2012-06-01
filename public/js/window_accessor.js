@@ -58,7 +58,7 @@ Pane.prototype.$ = function($find) {
   }
 };
 
-window.grid = new PaneGrid(22, 7);
+window.grid = new PaneGrid(26, 7);
 // window.grid.topLeft().down().right().$(".fire").remove(); // I removed <div class="fire">!
 
 // automatically stuff #paneContents divs into appropriate pane-x-y window panes

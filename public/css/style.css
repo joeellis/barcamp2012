@@ -89,11 +89,12 @@ h3 {
     top: 1082px; }
 
 #windowPanes {
+  background-color: #bbb;
   position: absolute;
   top: 860px;
   left: 50%;
   margin-left: -259px;
-  height: 2500px;
+  height: 3000px;
   width: 603px; }
   #windowPanes .row {
     height: 90px;
