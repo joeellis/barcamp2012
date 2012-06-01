@@ -54,4 +54,6 @@ Please use this repro and submit all contributions on a separate branch via Gith
 
 Under /src, we have the main building.psd file that you can use a a template to help add to the design of the building / surrounding area.  To contribute, please make your design ON A SEPARATE LAYER, and email the psd file to joe@joeellis.la , wherein myself or another contributer will make sure it gets added into the main building layer.  This may sound ridiculous but as git cannot merge images nicely, this way makes sure no one's work gets overwritten.
 
-### 
+IRC Channel
+-------------
+If you want to discuss your work, some of us sometimes hang out in #barcampnola on freenode.
