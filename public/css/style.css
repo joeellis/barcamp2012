@@ -79,6 +79,13 @@ h3 {
     margin: 0 auto; }
     #main .columns .content {
       width: 515px; }
+  #main .rampage {
+    background: url(../img/george.gif) no-repeat;
+    width: 300px;
+    height: 395px;
+    position: absolute;
+    left: 250px;
+    top: 1800px; }
 
 #windowPanes {
   position: absolute;
