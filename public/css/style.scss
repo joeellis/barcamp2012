@@ -1,3 +1,5 @@
+// Main stuff plus details - leave alone if you can
+
 html {
   overflow-x:hidden;
 }
@@ -51,6 +53,96 @@ h3 {
 #header {
   width: 100%;
 }
+
+
+// Clouds
+
+.clouds {
+  position: relative;
+  z-index: -99;
+
+  .big {
+    width: 104px;
+    height: 39px;
+    position: absolute;
+    background:url(../img/cloud_1.png) no-repeat;
+  }
+
+  .small {
+    width: 169px;
+    height: 102px;
+    position: absolute;
+    background:url(../img/cloud_2.png) no-repeat;
+  }
+}
+
+.fast {
+  -webkit-animation: move 25s infinite linear;
+  -moz-animation: move 25s infinite linear;
+  -ms-animation: move 25s infinite linear;
+  .cloud-1 {
+    top: 20px;
+  }
+  .cloud-2 {
+    left: 200px;
+    top: 280px;
+  }
+  .cloud-3 {
+    left: 600px;
+    top: 480px;
+  }
+  .cloud-4 {
+    top: 860px;
+  }
+  .cloud-5 {
+    left: 200px;
+    top: 1290px;
+  }
+}
+
+.slow {
+  -webkit-animation: move 60s infinite linear;
+  -moz-animation: move 60s infinite linear;
+  -ms-animation: move 60s infinite linear;
+  .cloud-1 {
+    top: 80px;
+  }
+  .cloud-2 {
+    left: 400px;
+    top: 130px;
+  }
+  .cloud-3 {
+    left: 120px;
+    top: 320px;
+  }
+  .cloud-4 {
+    left: 400px;
+    top: 620px;
+  }
+  .cloud-5 {
+    top: 940px;
+  }
+  .cloud-6 {
+    left: 400px;
+    top: 1600px;
+  }
+}
+
+@-webkit-keyframes move {
+  0% {left: -600px;}
+  100% {left: 2000px;} 
+}
+
+@-moz-keyframes move {
+  0% {left: -600px;}
+  100% {left: 2000px;} 
+}
+
+@-ms-keyframes move {
+  0% {left: -600px;}
+  100% {left: 2000px;} 
+}
+
 
 
 .trex {
@@ -134,6 +226,11 @@ h3 {
   }
 }
 
+
+// WindowPane code
+// DO NOT TOUCH UNLESS YOU KNOW WHAT YOU ARE DOING PLEASE
+// IT IS VERY MAGICAL
+
 #windowPanes {
   background-color: #bbb;
   position: absolute;
@@ -194,6 +291,11 @@ h3 {
   display: none;
 }
 
+
+
+// Add all your windowPane addition stuff here!
+// Keep it organized if you can, but it's not that big a deal...
+
 #helloWorld {
   font-family: monospace;
   font-size: 12px;
@@ -209,7 +311,6 @@ h3 {
     margin-left: -30px;
   }
 }
-
 
 .rampage {
   background:url(../img/george.gif) no-repeat;
@@ -233,16 +334,12 @@ h3 {
   top: 300px;
   left: 1200px;
   z-index: 100;
-  // right: 50%;
-  // margin-right: -300px;
 }
 
 #helicopter-1 {
   position: absolute;
   top: 400px;
   left: 300px;
-  // right: 50%;
-  // margin-right: -300px;
 }
 
 #helicopter-2 {
@@ -250,6 +347,4 @@ h3 {
   z-index: -1;
   top: 250px;
   left: 800px;
-  // right: 50%;
-  // margin-right: -300px;
 }
