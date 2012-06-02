@@ -102,6 +102,34 @@ h3 {
 
     .content {
       width:515px;
+
+      .story {
+        ul {
+          list-style-type:none;
+
+          li {
+            margin: 20px 0px 35px 0px;
+
+            .time {
+              font-size:11px;
+              color:rgba(255,255,255,0.7);
+              margin-bottom:7px;
+            }
+
+            &:last-child {
+
+              .time {
+                text-align:center;
+              }
+              
+              .title {
+                font-size:30px;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
     }
   }
 

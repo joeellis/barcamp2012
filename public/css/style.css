@@ -80,6 +80,19 @@ h3 {
     margin: 0 auto; }
     #main .columns .content {
       width: 515px; }
+      #main .columns .content .story ul {
+        list-style-type: none; }
+        #main .columns .content .story ul li {
+          margin: 20px 0px 35px 0px; }
+          #main .columns .content .story ul li .time {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 7px; }
+          #main .columns .content .story ul li:last-child .time {
+            text-align: center; }
+          #main .columns .content .story ul li:last-child .title {
+            font-size: 30px;
+            text-align: center; }
   #main .rampage {
     background: url(../img/george.gif) no-repeat;
     width: 300px;
