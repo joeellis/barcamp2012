@@ -32,7 +32,7 @@ To edit javascript, just edit what's in public. Boom!
 
 #### Is there a way to access each window on the building?
 
-There is a grid of absolutely positioned divs that overlay each window. There are 22 rows, and 7 columns. To set the contents of a window pane, put your HTML element inside the ```windowPanes``` div, and set the ```data-pane-id``` to ```pane-x-y``` based on the row and column index of the pane, like so:
+There is a grid of absolutely positioned divs that overlay each window. There are 26 rows and 7 columns. To set the contents of a window pane, put your HTML element inside the ```windowPanes``` div, and set the ```data-pane-id``` to ```pane-x-y``` based on the row and column index of the pane, like so:
 ```html
 <div id="paneContents">
   <div id="helloWorld" data-pane-id="pane-0-6">
@@ -54,4 +54,6 @@ Please use this repro and submit all contributions on a separate branch via Gith
 
 Under /src, we have the main building.psd file that you can use a a template to help add to the design of the building / surrounding area.  To contribute, please make your design ON A SEPARATE LAYER, and email the psd file to joe@joeellis.la , wherein myself or another contributer will make sure it gets added into the main building layer.  This may sound ridiculous but as git cannot merge images nicely, this way makes sure no one's work gets overwritten.
 
-### 
+IRC Channel
+-------------
+If you want to discuss your work, some of us sometimes hang out in #barcampnola on freenode.

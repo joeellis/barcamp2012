@@ -144,11 +144,12 @@ h3 {
 }
 
 #windowPanes {
+  background-color: #bbb;
   position: absolute;
   top: 860px;
   left: 50%;
   margin-left: -259px;
-  height: 2500px;
+  height: 3000px;
   width: 603px;
   .row {
     height: 90px;
@@ -229,6 +230,7 @@ h3 {
   position: absolute;
   top: 300px;
   left: 1200px;
+  z-index: 100;
   // right: 50%;
   // margin-right: -300px;
 }

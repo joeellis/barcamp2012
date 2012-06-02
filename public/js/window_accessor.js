@@ -16,10 +16,15 @@ PaneGrid = function(rows, cols) {
     }
   }
 };
-PaneGrid.prototype.pane = function(row, col) {
-  var invalid = col < this.bounds.left || col > this.bounds.right || row < this.bounds.top || row > this.bounds.bottom;
-  if(invalid) return new Pane(this.grid, row, col, null);
-  else return this.panes[row][col];
+PaneGrid.prototype.pane = function(rowNum, colNum) {
+  var row = this.panes[rowNum];
+  if(row) {
+    var pane = row[colNum];
+    if(pane) {
+      return pane;
+    }
+  }
+  return new Pane(this, rowNum, colNum, null); // invalid Pane instead of null helps with chaining
 };
 PaneGrid.prototype.topLeft = function() { return this.panes[this.bounds.top][this.bounds.left]; };
 PaneGrid.prototype.topRight = function() { return this.panes[this.bounds.top][this.bounds.right]; };
@@ -53,7 +58,7 @@ Pane.prototype.$ = function($find) {
   }
 };
 
-window.grid = new PaneGrid(22, 7);
+window.grid = new PaneGrid(26, 7);
 // window.grid.topLeft().down().right().$(".fire").remove(); // I removed <div class="fire">!
 
 // automatically stuff #paneContents divs into appropriate pane-x-y window panes
