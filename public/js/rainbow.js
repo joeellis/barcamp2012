@@ -61,7 +61,6 @@ RainbowSpan.prototype.moveRainbow = function() {
 
 function goRainbow() {
   var r = document.getElementsByClassName("rainbow"); //get span to apply rainbow
-  console.log(r);
   for(var i=0; i<r.length; i++) {
     var myRainbowSpan = new RainbowSpan(r[i], 0, 360, 255, 50, 18); //apply static rainbow effect
     myRainbowSpan.timer = window.setInterval(function () {

@@ -62,7 +62,7 @@ h3 {
   position: relative;
   z-index: 50; }
   #main .content {
-    width: 548px;
+    width: 700px;
     padding: 10px;
     margin: 0px auto;
     margin-bottom: 600px;
@@ -93,13 +93,6 @@ h3 {
           #main .columns .content .story ul li:last-child .title {
             font-size: 30px;
             text-align: center; }
-  #main .rampage {
-    background: url(../img/george.gif) no-repeat;
-    width: 300px;
-    height: 395px;
-    position: absolute;
-    left: 250px;
-    top: 1082px; }
 
 #windowPanes {
   background-color: #bbb;
@@ -157,6 +150,14 @@ h3 {
   overflow: hidden; }
   #hatWobble img {
     margin-left: -30px; }
+
+.rampage {
+  background: url(../img/george.gif) no-repeat;
+  width: 300px;
+  height: 395px;
+  position: absolute;
+  left: -131px;
+  z-index: 99; }
 
 .helicopter {
   background-image: url("../img/helicopter.gif");
