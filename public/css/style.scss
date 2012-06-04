@@ -130,17 +130,17 @@ h3 {
 
 @-webkit-keyframes move {
   0% {left: -600px;}
-  100% {left: 2000px;} 
+  100% {left: 2000px;}
 }
 
 @-moz-keyframes move {
   0% {left: -600px;}
-  100% {left: 2000px;} 
+  100% {left: 2000px;}
 }
 
 @-ms-keyframes move {
   0% {left: -600px;}
-  100% {left: 2000px;} 
+  100% {left: 2000px;}
 }
 
 
@@ -213,7 +213,7 @@ h3 {
               .time {
                 text-align:center;
               }
-              
+
               .title {
                 font-size:30px;
                 text-align: center;
@@ -352,3 +352,16 @@ h3 {
 .automatoon_wrapper {
    z-index: 1000;
 }
+.tentacle {
+  position: absolute;
+}
+.tentacle1 {
+  @extend .tentacle;
+  left: 365px;
+  top: 1335px;
+  height: 600px;
+  width: 750px;
+  background: url("../img/tentacle1.png") no-repeat;
+
+}
+

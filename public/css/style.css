@@ -258,3 +258,13 @@ h3 {
 
 .automatoon_wrapper {
   z-index: 1000; }
+
+.tentacle, .tentacle1 {
+  position: absolute; }
+
+.tentacle1 {
+  left: 365px;
+  top: 1335px;
+  height: 600px;
+  width: 750px;
+  background: url("../img/tentacle1.png") no-repeat; }
