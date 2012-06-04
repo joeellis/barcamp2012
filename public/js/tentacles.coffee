@@ -1,7 +1,8 @@
 $.fn.tentacleAttack = (opts) ->
 
   animateFrame = ->
-    pos = parseInt(@css('background-position-y'))
+    position = @css('background-position').split " "
+    pos = parseInt position[1]
     if @data 'skipframe'
       @data 'skipframe', @data('skipframe') - 1
       @removeData('skipframe') if @data('skipframe') == -1
@@ -16,7 +17,7 @@ $.fn.tentacleAttack = (opts) ->
         @removeData 'withdrawing'
         @removeData 'animating'
         clearInterval @data('attackInterval')
-    @css 'background-position-y', "#{pos}px"
+    @css 'background-position', "#{position[0]} #{pos}px"
 
   if opts?
     # opts are sent: do setup

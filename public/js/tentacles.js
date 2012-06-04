@@ -3,8 +3,9 @@
   $.fn.tentacleAttack = function(opts) {
     var animateFrame, interval, self;
     animateFrame = function() {
-      var pos;
-      pos = parseInt(this.css('background-position-y'));
+      var pos, position;
+      position = this.css('background-position').split(" ");
+      pos = parseInt(position[1]);
       if (this.data('skipframe')) {
         this.data('skipframe', this.data('skipframe') - 1);
         if (this.data('skipframe') === -1) this.removeData('skipframe');
@@ -22,7 +23,7 @@
           clearInterval(this.data('attackInterval'));
         }
       }
-      return this.css('background-position-y', "" + pos + "px");
+      return this.css('background-position', "" + position[0] + " " + pos + "px");
     };
     if (opts != null) {
       this.data('offset', opts.offset);
