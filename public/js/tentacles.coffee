@@ -28,7 +28,9 @@ $.fn.tentacleAttack = (opts) ->
     self = @
     interval = setInterval ->
       animateFrame.call self
-    , 60
+    , 40
     @.data 'attackInterval', interval
 
 $('.tentacle1').tentacleAttack frames: 5, offset: 600
+$('.tentacle2').tentacleAttack frames: 8, offset: 600
+$('.tentacle3').tentacleAttack frames: 8, offset: 600

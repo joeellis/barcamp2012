@@ -32,13 +32,23 @@
       self = this;
       interval = setInterval(function() {
         return animateFrame.call(self);
-      }, 60);
+      }, 40);
       return this.data('attackInterval', interval);
     }
   };
 
   $('.tentacle1').tentacleAttack({
     frames: 5,
+    offset: 600
+  });
+
+  $('.tentacle2').tentacleAttack({
+    frames: 8,
+    offset: 600
+  });
+
+  $('.tentacle3').tentacleAttack({
+    frames: 8,
     offset: 600
   });
 

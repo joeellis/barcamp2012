@@ -354,14 +354,28 @@ h3 {
 }
 .tentacle {
   position: absolute;
+  left: 50%;
+  margin-left: -216px;
 }
 .tentacle1 {
   @extend .tentacle;
-  left: 365px;
   top: 1335px;
   height: 600px;
   width: 750px;
   background: url("../img/tentacle1.png") no-repeat;
-
+}
+.tentacle2 {
+  @extend .tentacle;
+  top: 1335px;
+  height: 600px;
+  width: 750px;
+  background: url("../img/tentacle2.png") no-repeat;
+}
+.tentacle3 {
+  @extend .tentacle;
+  top: 1335px;
+  height: 600px;
+  width: 750px;
+  background: url("../img/tentacle3.png") no-repeat;
 }
 
