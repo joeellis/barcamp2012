@@ -255,3 +255,6 @@ h3 {
   z-index: -1;
   top: 250px;
   left: 800px; }
+
+.automatoon_wrapper {
+  z-index: 1000; }
