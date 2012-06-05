@@ -442,7 +442,7 @@ automatoon_player = {};
 $(function(){
   $("body").keydown(function(event) {
     if(event.which === 90) {
-      automatoon_player.play({script: 'swing', top: $(window).scrollTop() });
+      automatoon_player.play('swing');
     }
   })
 })
@@ -450,7 +450,7 @@ $(function(){
 $(function(){
   $("body").keydown(function(event) {
     if(event.which === 74) {
-      automatoon_player.play({script: 'jetsons', top: $(window).scrollTop() });
+      automatoon_player.play('jetsons');
     }
   })
 })
@@ -458,7 +458,7 @@ $(function(){
 $(function(){
   $("body").keydown(function(event) {
     if(event.which === 83) {
-      automatoon_player.play({script: 'spiderman', top: $(window).scrollTop() });
+      automatoon_player.play('spiderman');
     }
   })
 })
