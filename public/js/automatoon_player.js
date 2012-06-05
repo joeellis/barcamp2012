@@ -440,16 +440,25 @@ automatoon_player = {};
 
 
 $(function(){
-  $('.automatoon_wrapper').hide();
   $("body").keydown(function(event) {
     if(event.which === 90) {
-      $('.automatoon_wrapper').hide();
-      automatoon_player.stop();
-      $('.automatoon_wrapper').show();
       automatoon_player.play({script: 'swing', top: $(window).scrollTop() });
-      setTimeout(function(){ 
-        $('.automatoon_wrapper').hide();
-      }, 5000);
+    }
+  })
+})
+
+$(function(){
+  $("body").keydown(function(event) {
+    if(event.which === 74) {
+      automatoon_player.play({script: 'jetsons', top: $(window).scrollTop() });
+    }
+  })
+})
+
+$(function(){
+  $("body").keydown(function(event) {
+    if(event.which === 83) {
+      automatoon_player.play({script: 'spiderman', top: $(window).scrollTop() });
     }
   })
 })
