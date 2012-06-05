@@ -48,6 +48,29 @@ $.fn.isVillainous = (who) ->
       @fadeIn()
     , 5000
 
-$('.tentacle1').tentacleAttack frames: 5, offset: 600
-$('.tentacle2').tentacleAttack frames: 8, offset: 600
-$('.tentacle3').tentacleAttack frames: 8, offset: 600
+t1 = $('.tentacle1')
+t2 = $('.tentacle2')
+t3 = $('.tentacle3')
+t1.tentacleAttack frames: 5, offset: 600
+t2.tentacleAttack frames: 8, offset: 600
+t3.tentacleAttack frames: 8, offset: 600
+t1.on 'attacking', ->
+  t2.hide()
+  t3.hide()
+t1.on 'withdrawn', ->
+  t2.show()
+  t3.show()
+
+t2.on 'attacking', ->
+  t1.hide()
+  t3.hide()
+t2.on 'withdrawn', ->
+  t1.show()
+  t3.show()
+
+t3.on 'attacking', ->
+  t1.hide()
+  t2.hide()
+t3.on 'withdrawn', ->
+  t1.show()
+  t2.show()
