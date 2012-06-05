@@ -71,7 +71,7 @@
 							raptor = $('#elRaptor').css({
 								"bottom": "-700px",
 								"right" : "0",
-								"z-index": "1000"
+								"z-index": "99999"
 							})
 							locked = false;
 						})
