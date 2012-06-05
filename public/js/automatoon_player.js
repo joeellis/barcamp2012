@@ -457,7 +457,7 @@ $(function(){
 
 $(function(){
   $("body").keydown(function(event) {
-    if(event.which === 83) {
+    if(event.which === 77) {
       automatoon_player.play('spiderman');
     }
   })
