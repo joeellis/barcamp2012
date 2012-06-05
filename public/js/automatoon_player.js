@@ -447,7 +447,6 @@ $(function(){
     if(event.which === 90) {
       $('.automatoon_wrapper').hide();
       automatoon_player.stop();
-      $('.automatoon_wrapper').css('-moz-transform','translateY(' + $(window).scrollTop() + "px)");
       $('.automatoon_wrapper').show();
       automatoon_player.play({script: 'swing', top: $(window).scrollTop() });
       setTimeout(function(){ 
