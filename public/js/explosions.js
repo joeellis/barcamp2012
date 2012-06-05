@@ -97,15 +97,22 @@
   };
 
   $(function() {
-    var asteroid, donkeycart;
+    var asteroid, donkeycart, roach;
     asteroid = $('#scumbag-asteroid');
     asteroid.explode({
       images: ['img/scumbag-hat.png', 'img/rock.png', 'img/triceratops-skull.png']
     });
     asteroid.isVillainous($('.tentacle3'));
     donkeycart = $('#donkeycart');
-    donkeycart.explode();
-    return donkeycart.isVillainous($('.tentacle2'));
+    donkeycart.explode({
+      images: ['img/scumbag-hat.png', 'img/horse-poop.png', 'img/wagonwheel.png']
+    });
+    donkeycart.isVillainous($('.tentacle2'));
+    roach = $('#cockroach');
+    roach.explode({
+      images: ['img/scumbag-hat.png', 'img/cockroach-leg.png', 'img/intestines.png']
+    });
+    return roach.isVillainous($('.tentacle1'));
   });
 
 }).call(this);

@@ -98,6 +98,21 @@ $ ->
   asteroid.isVillainous($('.tentacle3'))
 
   donkeycart = $('#donkeycart')
-  donkeycart.explode()
+  donkeycart.explode
+    images: [
+      'img/scumbag-hat.png'
+      'img/horse-poop.png'
+      'img/wagonwheel.png'
+    ]
 
   donkeycart.isVillainous($('.tentacle2'))
+
+  roach = $('#cockroach')
+  roach.explode
+    images: [
+      'img/scumbag-hat.png'
+      'img/cockroach-leg.png'
+      'img/intestines.png'
+    ]
+
+  roach.isVillainous $('.tentacle1')
