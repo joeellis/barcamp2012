@@ -130,17 +130,17 @@ h3 {
 
 @-webkit-keyframes move {
   0% {left: -600px;}
-  100% {left: 2000px;} 
+  100% {left: 2000px;}
 }
 
 @-moz-keyframes move {
   0% {left: -600px;}
-  100% {left: 2000px;} 
+  100% {left: 2000px;}
 }
 
 @-ms-keyframes move {
   0% {left: -600px;}
-  100% {left: 2000px;} 
+  100% {left: 2000px;}
 }
 
 
@@ -174,8 +174,13 @@ h3 {
     width:700px;
     padding:10px;
     margin: 0px auto;
-    margin-bottom: 600px;
     background-color: rgba(0,0,0,0.8);
+  }
+  .content.intro {
+    margin-bottom: 1010px;
+  }
+  .content.explain {
+    margin-bottom: 600px;
   }
 
   .story {
@@ -213,7 +218,7 @@ h3 {
               .time {
                 text-align:center;
               }
-              
+
               .title {
                 font-size:30px;
                 text-align: center;
@@ -351,4 +356,34 @@ h3 {
 
 .automatoon_wrapper {
    z-index: 1000;
+}
+.tentacle {
+  position: absolute;
+  left: 50%;
+  margin-left: -216px;
+  z-index: 60;
+}
+.tentacle1 {
+  @extend .tentacle;
+  top: 1335px;
+  height: 600px;
+  width: 750px;
+  background: url("../img/tentacle1.png") no-repeat;
+}
+.tentacle2 {
+  @extend .tentacle;
+  top: 1335px;
+  height: 600px;
+  width: 750px;
+  background: url("../img/tentacle2.png") no-repeat;
+}
+.tentacle3 {
+  @extend .tentacle;
+  top: 1335px;
+  height: 600px;
+  width: 750px;
+  background: url("../img/tentacle3.png") no-repeat;
+}
+#scumbag-asteroid, #donkeycart, #cockroach {
+  cursor: pointer;
 }
