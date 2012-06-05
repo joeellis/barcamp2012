@@ -39,9 +39,9 @@ $.fn.tentacleAttack = (opts) ->
       @data 'attackInterval', interval
 
 $.fn.isVillainous = (who) ->
-  @.click =>
+  @click =>
     who.one 'attacked', =>
-      @explode()
+      @trigger 'explode'
       @hide()
     who.trigger 'attack'
     setTimeout =>

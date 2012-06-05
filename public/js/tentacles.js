@@ -50,7 +50,7 @@
     var _this = this;
     return this.click(function() {
       who.one('attacked', function() {
-        _this.explode();
+        _this.trigger('explode');
         return _this.hide();
       });
       who.trigger('attack');
