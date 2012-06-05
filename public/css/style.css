@@ -262,9 +262,6 @@ h3 {
 .automatoon_wrapper {
   z-index: 1000; }
 
-.tentacle, .tentacle1 {
-  position: absolute; }
-
 .tentacle, .tentacle1, .tentacle2, .tentacle3 {
   position: absolute;
   left: 50%;
@@ -291,3 +288,7 @@ h3 {
 
 #scumbag-asteroid, #donkeycart, #cockroach {
   cursor: pointer; }
+
+#sam-max-3 img {
+  height: 90px;
+  margin-left: -50px; }
