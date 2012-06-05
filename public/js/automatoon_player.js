@@ -462,3 +462,16 @@ $(function(){
     }
   })
 })
+
+$(function() {
+    $("body").keydown(function(event) {
+        if(event.which === 66) {
+            var h = $(window).height();
+            var w = $(window).width();
+            var v = $('<video width="'+(w)+'" height="'+h+'" autoplay="autoplay" style="position:fixed;z-index:1000;margin-top:-50px;padding:0" preload="auto">  <source src="sounds/batman.mp4" type="video/mp4" /> </video>');
+            v.bind("ended", function() { v.remove()});
+            $("body").prepend(v);
+        }
+    });
+
+});
