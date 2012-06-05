@@ -72,10 +72,16 @@ $.fn.explode = (opts = {}) ->
 
   count = opts.count
 
+  if opts.sound?
+    sound = $("<audio id='sound-#{opts.sound}' preload='auto'><source src='sounds/#{opts.sound}.mp3' /><source src='sounds/#{opts.sound}.ogg' /></audio>")
+    $('body').append sound
+
   @on 'explode', =>
     startX = opts.startX || @offset().left
     startY = opts.startY || @offset().top + (@height() / 4)
     total = count
+    if opts.sound?
+      $("#sound-#{opts.sound}").get(0).play()
     while total -= 1
       element = images[randBetween 0, images.length].clone()
       __explode.call element,
@@ -88,6 +94,7 @@ $.fn.explode = (opts = {}) ->
 $ ->
   asteroid = $('#scumbag-asteroid')
   asteroid.explode
+    sound: 'explosion'
     images: [
       'img/scumbag-hat.png'
       'img/rock.png'
@@ -97,6 +104,7 @@ $ ->
 
   donkeycart = $('#donkeycart')
   donkeycart.explode
+    sound: 'WilhelmScream'
     images: [
       'img/scumbag-hat.png'
       'img/horse-poop.png'
@@ -107,6 +115,7 @@ $ ->
 
   roach = $('#cockroach')
   roach.explode
+    sound: 'female_scream'
     images: [
       'img/scumbag-hat.png'
       'img/cockroach-leg.png'

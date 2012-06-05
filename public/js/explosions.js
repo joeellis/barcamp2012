@@ -1,7 +1,7 @@
 (function() {
 
   $.fn.explode = function(opts) {
-    var count, defaults, images, randBetween, rotate, __explode,
+    var count, defaults, images, randBetween, rotate, sound, __explode,
       _this = this;
     if (opts == null) opts = {};
     randBetween = function(a, b) {
@@ -18,7 +18,6 @@
     __explode = function(iOpts) {
       var arc, start, startX, startY,
         _this = this;
-      console.log(iOpts);
       $('body').append(this);
       this.show();
       startX = iOpts.startX;
@@ -67,7 +66,6 @@
     };
     $.extend(defaults, opts);
     opts = defaults;
-    console.log(opts);
     images = [];
     $.each(opts.images, function(index, image) {
       var img;
@@ -76,11 +74,16 @@
       return images.push(img);
     });
     count = opts.count;
+    if (opts.sound != null) {
+      sound = $("<audio id='sound-" + opts.sound + "' preload='auto'><source src='sounds/" + opts.sound + ".mp3' /><source src='sounds/" + opts.sound + ".ogg' /></audio>");
+      $('body').append(sound);
+    }
     return this.on('explode', function() {
       var element, startX, startY, total, _results;
       startX = opts.startX || _this.offset().left;
       startY = opts.startY || _this.offset().top + (_this.height() / 4);
       total = count;
+      if (opts.sound != null) $("#sound-" + opts.sound).get(0).play();
       _results = [];
       while (total -= 1) {
         element = images[randBetween(0, images.length)].clone();
@@ -100,16 +103,19 @@
     var asteroid, donkeycart, roach;
     asteroid = $('#scumbag-asteroid');
     asteroid.explode({
+      sound: 'explosion',
       images: ['img/scumbag-hat.png', 'img/rock.png', 'img/triceratops-skull.png']
     });
     asteroid.isVillainous($('.tentacle3'));
     donkeycart = $('#donkeycart');
     donkeycart.explode({
+      sound: 'WilhelmScream',
       images: ['img/scumbag-hat.png', 'img/horse-poop.png', 'img/wagonwheel.png']
     });
     donkeycart.isVillainous($('.tentacle2'));
     roach = $('#cockroach');
     roach.explode({
+      sound: 'female_scream',
       images: ['img/scumbag-hat.png', 'img/cockroach-leg.png', 'img/intestines.png']
     });
     return roach.isVillainous($('.tentacle1'));
