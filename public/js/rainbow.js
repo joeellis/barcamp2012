@@ -57,17 +57,22 @@ RainbowSpan.prototype.moveRainbow = function() {
     this.span.childNodes[i].style.color="rgb("+red+", "+grn+", "+blu+")";
   }
   this.hue+=this.hspd;
-}
+};
 
-function goRainbow() {
+RainbowSpan.prototype.run = function () {
+  var rainbowSpan = this;
+  this.timer = window.setInterval(function () {
+    rainbowSpan.moveRainbow();
+  }, this.speed);
+};
+
+function rainbowize() {
   var r = document.getElementsByClassName("rainbow"); //get span to apply rainbow
   for(var i=0; i<r.length; i++) {
     var myRainbowSpan = new RainbowSpan(r[i], 0, 360, 255, 50, 18); //apply static rainbow effect
-    myRainbowSpan.timer = window.setInterval(function () {
-      myRainbowSpan.moveRainbow();
-    }, myRainbowSpan.speed);
+    myRainbowSpan.run();
   }
 }
 
-goRainbow();
+rainbowize();
 
