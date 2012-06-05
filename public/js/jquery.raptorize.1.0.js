@@ -69,7 +69,8 @@
 						}, 2200, function() {
 							raptor = $('#elRaptor').css({
 								"bottom": "-700px",
-								"right" : "0"
+								"right" : "0",
+								"z-index": "1000"
 							})
 							locked = false;
 						})
