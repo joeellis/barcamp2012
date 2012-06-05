@@ -174,8 +174,13 @@ h3 {
     width:700px;
     padding:10px;
     margin: 0px auto;
-    margin-bottom: 600px;
     background-color: rgba(0,0,0,0.8);
+  }
+  .content.intro {
+    margin-bottom: 1010px;
+  }
+  .content.explain {
+    margin-bottom: 600px;
   }
 
   .story {
@@ -356,6 +361,7 @@ h3 {
   position: absolute;
   left: 50%;
   margin-left: -216px;
+  z-index: 60;
 }
 .tentacle1 {
   @extend .tentacle;
@@ -378,4 +384,6 @@ h3 {
   width: 750px;
   background: url("../img/tentacle3.png") no-repeat;
 }
-
+#scumbag-asteroid {
+  cursor: pointer;
+}

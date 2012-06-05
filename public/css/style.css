@@ -139,8 +139,11 @@ h3 {
     width: 700px;
     padding: 10px;
     margin: 0px auto;
-    margin-bottom: 600px;
     background-color: rgba(0, 0, 0, 0.8); }
+  #main .content.intro {
+    margin-bottom: 1010px; }
+  #main .content.explain {
+    margin-bottom: 600px; }
   #main .story {
     margin: 0 auto;
     overflow: auto;
@@ -265,7 +268,8 @@ h3 {
 .tentacle, .tentacle1, .tentacle2, .tentacle3 {
   position: absolute;
   left: 50%;
-  margin-left: -216px; }
+  margin-left: -216px;
+  z-index: 60; }
 
 .tentacle1 {
   top: 1335px;
@@ -284,3 +288,6 @@ h3 {
   height: 600px;
   width: 750px;
   background: url("../img/tentacle3.png") no-repeat; }
+
+#scumbag-asteroid {
+  cursor: pointer; }
