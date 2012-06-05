@@ -8,7 +8,7 @@ $.fn.galagable = (opts = {}) ->
 
   @each ->
     self = $(@)
-    self.click =>
+    self.on 'galaga' =>
       width = self.width()
       self.css 'backgroundImage', 'none'
       self.stop()
@@ -20,4 +20,5 @@ $.fn.galagable = (opts = {}) ->
 
   @
 
-$('.helicopter').galagable()
+$('.helicopter').galagable().click =>
+  @trigger 'galaga'

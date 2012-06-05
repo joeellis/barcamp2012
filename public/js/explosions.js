@@ -29,10 +29,8 @@
         var gravity, t, x, y;
         t = ((new Date).getTime() - start) / 1000;
         gravity = 9.8;
-        x = what.offset().left;
-        y = $('body').height() - what.offset().top;
         x = startX + iOpts.v * Math.sin(iOpts.angle) * t;
-        y = startY + (iOpts.v + gravity * gravity * t * -1) * t;
+        y = startY + (iOpts.v * Math.cos(iOpts.angle) + gravity * gravity * t * -1) * t;
         what.css('left', "" + x + "px");
         return what.css('bottom', "" + y + "px");
       };
@@ -55,8 +53,8 @@
       minV: 130,
       maxV: 350,
       rotateSpeed: 15,
-      minAngle: 60,
-      maxAngle: 150,
+      minAngle: 80,
+      maxAngle: 130,
       minRotate: 5,
       maxRotate: 25,
       count: 30,
