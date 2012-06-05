@@ -12,6 +12,7 @@ $.fn.explode = (opts = {}) ->
     what.css('-moz-transform', 'rotate(' + r + 'deg)')
 
   __explode = (iOpts) ->
+    console.log iOpts
     $('body').append @
     @show()
     startX = iOpts.startX
@@ -61,11 +62,13 @@ $.fn.explode = (opts = {}) ->
       'img/helicopter.gif'
     ]
 
-  opts = $.merge(defaults, opts)
+  $.extend(defaults, opts)
+  opts = defaults
+  console.log opts
   images = []
   # preload images
   $.each opts.images, (index, image) ->
-    img = $("<img src='#{image}' style='display: none; position: absolute;z-index: 55'/>")
+    img = $("<img src='#{image}' style='width: 70px;display: none; position: absolute;z-index: 55'/>")
     $('body').append(img)
     images.push img
 
@@ -76,7 +79,7 @@ $.fn.explode = (opts = {}) ->
     startY = opts.startY || @offset().top + (@height() / 4)
     total = count
     while total -= 1
-      element = images[randBetween 0, images.length - 1].clone()
+      element = images[randBetween 0, images.length].clone()
       __explode.call element,
         v: randBetween opts.minV, opts.maxV
         angle: randBetween opts.minAngle, opts.maxAngle
@@ -86,5 +89,15 @@ $.fn.explode = (opts = {}) ->
 
 $ ->
   asteroid = $('#scumbag-asteroid')
-  asteroid.explode()
+  asteroid.explode
+    images: [
+      'img/scumbag-hat.png'
+      'img/rock.png'
+      'img/triceratops-skull.png'
+    ]
   asteroid.isVillainous($('.tentacle3'))
+
+  donkeycart = $('#donkeycart')
+  donkeycart.explode()
+
+  donkeycart.isVillainous($('.tentacle2'))

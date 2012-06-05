@@ -18,6 +18,7 @@
     __explode = function(iOpts) {
       var arc, start, startX, startY,
         _this = this;
+      console.log(iOpts);
       $('body').append(this);
       this.show();
       startX = iOpts.startX;
@@ -64,11 +65,13 @@
       startY: this.offset().top + (this.height() / 4),
       images: ['img/helicopter.gif']
     };
-    opts = $.merge(defaults, opts);
+    $.extend(defaults, opts);
+    opts = defaults;
+    console.log(opts);
     images = [];
     $.each(opts.images, function(index, image) {
       var img;
-      img = $("<img src='" + image + "' style='display: none; position: absolute;z-index: 55'/>");
+      img = $("<img src='" + image + "' style='width: 70px;display: none; position: absolute;z-index: 55'/>");
       $('body').append(img);
       return images.push(img);
     });
@@ -80,7 +83,7 @@
       total = count;
       _results = [];
       while (total -= 1) {
-        element = images[randBetween(0, images.length - 1)].clone();
+        element = images[randBetween(0, images.length)].clone();
         _results.push(__explode.call(element, {
           v: randBetween(opts.minV, opts.maxV),
           angle: randBetween(opts.minAngle, opts.maxAngle),
@@ -94,10 +97,15 @@
   };
 
   $(function() {
-    var asteroid;
+    var asteroid, donkeycart;
     asteroid = $('#scumbag-asteroid');
-    asteroid.explode();
-    return asteroid.isVillainous($('.tentacle3'));
+    asteroid.explode({
+      images: ['img/scumbag-hat.png', 'img/rock.png', 'img/triceratops-skull.png']
+    });
+    asteroid.isVillainous($('.tentacle3'));
+    donkeycart = $('#donkeycart');
+    donkeycart.explode();
+    return donkeycart.isVillainous($('.tentacle2'));
   });
 
 }).call(this);
