@@ -178,7 +178,7 @@ automatoon_player = {};
         image = images[image_id];
         img.attr('src', image.get(0).toDataURL());
       } else {
-        img.attr('src', directory + 'images' + divider + image_id +'.png');
+        img.attr('src', 'img/' + directory + 'images' + divider + image_id +'.png');
       }
       set_transform(img, matrix);
       enable_transition(img);
@@ -193,7 +193,7 @@ automatoon_player = {};
         position: 'fixed',
         opacity: 0,
         display: 'none'
-      }), images != null ? (image_2 = images[image_id_2], img_2.attr('src', image_2.get(0).toDataURL())) : img_2.attr('src', directory + 'images' + divider + image_id_2 + '.png'), set_transform(img_2, matrix_2), enable_transition(img_2)) : void 0);
+      }), images != null ? (image_2 = images[image_id_2], img_2.attr('src', image_2.get(0).toDataURL())) : img_2.attr('src', 'img/' + directory + 'images' + divider + image_id_2 + '.png'), set_transform(img_2, matrix_2), enable_transition(img_2)) : void 0);
     }
     return _results;
   };
@@ -425,7 +425,7 @@ automatoon_player = {};
       if (params.hosted != null) {
         url = 'script.js';
       } else {
-        url = (safe_dirname(params.script)) + '/script.js';
+        url = 'js/' + (safe_dirname(params.script)) + '-script.js';
       }
       return $.getJSON(url, function(animation) {
         params.animation = animation;
