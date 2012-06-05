@@ -3,11 +3,12 @@ WELCOME TO BARCAMPNOLA 2012 WEBSITE
 
 Hello, and thank you for possibly thinking about contributing to our BarCampNOLA 2012 website.  The whole goal of this project is to try and get people to contribute to a larger project so they can feel happy and proud of themselves that they made something great.  The other goal is to use a lot of dinosaurs and video game text for seemingly no reason.
 
-Rules
+Rules (very easy rules, so take a minute to read please)
 -------------
-- Keep your racism / pornography / racy stuff to yourself
-- The site must not be slow to run / load
-- Anything added to the site must not immediately interfere with the BarCampNOLA event info on load (if someone triggers an event that does so though, it's ok)
+- Don't feel you need to ask permission if you have an idea, just go ahead and contribute!  No contribution is too small.  We review all the patches, so if there is an issue, it'll be brought up there.  Feel free to submit work-in-progress pull requests as well if you'd like to get some comments beforehand.
+- That being said: Keep your racism / sexism / infantilism / pornography / racy stuff to yourself.  **If you aren't sure whether or not something should be added in, it means it probably shouldn't be added in.**  We try to be very lenient, but we do need to draw lines at some point, so just use good judgment! 
+- The site must not be slow to run / load, keep that in mind if you're thinking of contributing something heavy.
+- Anything added to the site must not immediately interfere with the BarCampNOLA event info / details on load (if someone triggers an event that does so though, we're ok with that). 
 
 
 Questions
@@ -29,6 +30,18 @@ To make changes to the styles, edit `public/css/styles.scss` and re-compile the 
 
 To edit javascript, just edit what's in public. Boom!
 
+#### Is there a way to access each window on the building?
+
+There is a grid of absolutely positioned divs that overlay each window. There are 26 rows and 7 columns. To set the contents of a window pane, put your HTML element inside the ```windowPanes``` div, and set the ```data-pane-id``` to ```pane-x-y``` based on the row and column index of the pane, like so:
+```html
+<div id="paneContents">
+  <div id="helloWorld" data-pane-id="pane-0-6">
+    Hello,<br/>World!
+  </div>
+</div>
+```
+In this case, the Javascript will scoop up the ```helloWorld``` element and stuff it into the window pane element that is in the first row and seventh column.
+
 #### I can do the Rubies
 
 Then you can `rackup config.ru`, can't you? Visit localhost:9292 to join in the fun.
@@ -41,4 +54,6 @@ Please use this repro and submit all contributions on a separate branch via Gith
 
 Under /src, we have the main building.psd file that you can use a a template to help add to the design of the building / surrounding area.  To contribute, please make your design ON A SEPARATE LAYER, and email the psd file to joe@joeellis.la , wherein myself or another contributer will make sure it gets added into the main building layer.  This may sound ridiculous but as git cannot merge images nicely, this way makes sure no one's work gets overwritten.
 
-### 
+IRC Channel
+-------------
+If you want to discuss your work, some of us sometimes hang out in #barcampnola on freenode.

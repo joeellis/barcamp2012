@@ -24,42 +24,156 @@
   <h1><span>BarcampNola 5</span></h1>
   <h2>July 14th-15th</h2>
 </header>
-<div id="main" role="main">
 
-  <ul id="nav">
-    <li><a href="#intro" title="Next Section"><img src="img/dot.png" alt="Link" /></a></li>
-    <li><a href="#second" title="Next Section"><img src="img/dot.png" alt="Link" /></a></li>
-    <li><a href="#third" title="Next Section"><img src="img/dot.png" alt="Link" /></a></li>
-    <li><a href="#fourth" title="Next Section"><img src="img/dot.png" alt="Link" /></a></li>
-    <a href="https://twitter.com/bhelx" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @bhelx</a>
-  </ul>
- 
-  <section class="content">
+<div id="helicopter-0" class="helicopter"></div>
+<div id="helicopter-1" class="helicopter"></div>
+<div id="helicopter-2" class="helicopter"></div>
+
+<div class="trex">
+  <div class="image"></div>
+</div>
+
+<div class="automatoon_wrapper"></div>
+
+<div class="clouds fast">
+  <div class="cloud-1 big"></div>
+  <div class="cloud-2 small"></div>
+  <div class="cloud-3 small"></div>
+  <div class="cloud-4 big"></div>
+  <div class="cloud-5 small"></div>
+</div>
+
+<div class="clouds slow">
+  <div class="cloud-1 big"></div>
+  <div class="cloud-2 small"></div>
+  <div class="cloud-3 big"></div>
+  <div class="cloud-4 small"></div>
+  <div class="cloud-5 big"></div>
+  <div class="cloud-6 small"></div>
+</div>
+
+<div id="main" role="main">
+  <!-- animated tentacles -->
+  <div class=tentacle1></div>
+  <div class=tentacle2></div>
+  <div class=tentacle3></div>
+  <section class="content intro">
     <div class="story">
-      <h3>What is BarCampNOLA??</h3>
+      <h3><span class="rainbow">What is BarCampNOLA??</span></h3>
       <p>
         BarCampNola is New Orleans’ FREE tech "unconference," organized on the fly by attendees, for attendees.
-        <a href="https://twitter.com/bhelx" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @bhelx</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
       </p>
     </div>
   </section>
-  <section class="content">
+ 
+  <section class="content explain">
     <div class="story">
-      <h3>EXPLAIN MORE!!!</h3>
+      <h3><span class="rainbow">EXPLAIN MORE!!!</span></h3>
       <p>
         BarCampNola is a local incarnation of the network of user generated conferences called BarCamps.  It’s an ad-hoc gathering for people to share and learn in an open environment. There are discussions, demos, and interaction from attendees, and it's free and open so each attendee can easily participate!
       </p>
     </div>
   </section>
 
-  <section class="content">
-    <div class="story">
-     
-    </div>
-  </section>
+  <div class="schedule columns clearfix">
+    <section class="content left">
+      <div class="story">
+        <h3>SAT JULY 14TH</h3>
+        <ul>
+          <li>
+            <div class="time">9:30-10:00am</div>
+            <div class="title">Registration &amp; Coffee</div>
+          </li>
+          <li>
+            <div class="time">10:00-11:00am</div>
+            <div class="title">Introductions &amp; Topics</div>
+          </li>
+          <li>
+            <div class="time">11:00-1:00pm</div>
+            <div class="title">Presentations: Round One</div>
+          </li>
+          <li>
+            <div class="time">1:00-2:00pm</div>
+            <div class="title">Lunch &amp; Day 2 Project Revealed</div>
+          </li>
+          <li>
+            <div class="time">2:00-5:00pm</div>
+            <div class="title">Presentations: Round Two</div>
+          </li>
+          <li>
+            <div class="time">afterwards...</div>
+            <div class="title"><span class="rainbow">PARTYTIME!!!</span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="content right"> 
+      <div class="story">
+        <h3>SUN JULY 15TH</h3>
+        <ul>
+          <li>
+            <div class="time">9:30-10:00am</div>
+            <div class="title">Coffee</div>
+          </li>
+          <li>
+            <div class="time">10:00-1:00pm</div>
+            <div class="title">Hack Day: Project Work Begins</div>
+          </li>
+          <li>
+            <div class="time">1:00-1:30pm</div>
+            <div class="title">Lunch Yum Yum Time</div>
+          </li>
+          <li>
+            <div class="time">1:30-5:00pm</div>
+            <div class="title">Hack Day: SUPER WORK</div>
+          </li>
+          <li>
+            <div class="time">5:30-6:00pm</div>
+            <div class="title">Hack Day: Finish Work</div>
+          </li>
+          <li>
+            <div class="time">afterwards...</div>
+            <div class="title"><span class="rainbow">PARTYTIME 2!!!</span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
 
+  <!--
+  window_accessor.js will automatically pick up these divs and stuff them
+  into the appropriate window pane, based on the data-pane-id attribute.
+  LOOK AT THE README BECAUSE ITS VERY VERY HELPFUL!!!
+  -->
+  <div id="paneContents">
+    <div id="helloWorld" data-pane-id="pane-0-6">
+      Hello,<br/>World!
+    </div>
+    <div class="rampage" data-pane-id="pane-4-0"></div>
+    <div class="saints" data-pane-id="pane-12-5">
+      <img src="img/saints.png"/>
+    </div>
+    <div id="hatWobble" data-pane-id="pane-13-2">
+      <img src="img/hatwobble.gif"/>
+    </div>
+    <div id="bario" data-pane-id="pane-15-1">
+      <a href="#bario" id="bario"><img src="img/bario.png"></a>
+    </div>
+    <div id="bario" data-pane-id="pane-15-4">
+      <a href="http://i.imgur.com/PCi0Z.jpg"><img src="img/philosoraptor.png"/></a>
+    </div>
+    <div id=scumbag-asteroid data-pane-id="pane-10-1">
+      <img src="img/scumbag-asteroid.png" width=85 title='Kill the dinosaurs, will you?!'/>
+    </div>
+    <div id=donkeycart data-pane-id="pane-8-3">
+      <img src="img/donkeycart.png" width=85 title='GET OUT OF THE WAY!!!'/>
+    </div>
+    <div id=cockroach data-pane-id="pane-7-5">
+      <img src="img/cockroach.png" width=85 title='Why do you have to exist?'/>
+    </div>
+  </div>
 </div>
+
 <footer>
 
 </footer>
@@ -67,7 +181,17 @@
 <script src="js/libs/jquery-1.7.2.min.js"></script>
 
 <script src="js/plugins.js"></script>
-<script src="js/script.js"></script>
+<script src="js/rainbow.js"></script>
+<script src="js/heli.js"></script>
+<script src="js/keymaster.min.js"></script>
+<script src="js/enjine.min.js"></script>
+<script src="js/mario.min.js"></script>
+<script src="js/bario.js"></script>
+<script src="js/automatoon_player.js"></script>
+<script src="js/explosions.js"></script>
+<script src="js/tentacles.js"></script>
+<script src="js/window_accessor.js"></script>
+<script src="js/jquery.raptorize.1.0.js"></script>
 
 </body>
 </html>

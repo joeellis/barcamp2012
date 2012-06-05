@@ -1,8 +1,16 @@
+// Main stuff plus details - leave alone if you can
+
+html {
+  overflow-x:hidden;
+}
+
 body{
   margin: 0px auto;
   min-width: 980px;
-  padding-top: 30px;
-  background-color: #46bfee;
+  padding-top: 50px;
+  background-color: #6fbcfe;
+  overflow-x:hidden;
+  position: relative;
 }
 
 p{
@@ -18,7 +26,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 60px;
   text-shadow: 0px 5px 5px rgba(0,0,0,0.1);
 }
 
@@ -46,28 +54,336 @@ h3 {
   width: 100%;
 }
 
-#main {
-  background:#46bfee url(../img/building.png) no-repeat top center;
-  height:5430px;
-  padding-top: 700px;
+
+// Clouds
+
+.clouds {
   position: relative;
+  z-index: -99;
+
+  .big {
+    width: 104px;
+    height: 39px;
+    position: absolute;
+    background:url(../img/cloud_1.png) no-repeat;
+  }
+
+  .small {
+    width: 169px;
+    height: 102px;
+    position: absolute;
+    background:url(../img/cloud_2.png) no-repeat;
+  }
 }
 
-.content {
-  background: #fff;
-  width:600px;
-  padding:10px;
-  margin: 0px auto;
-  margin-bottom: 600px;
-  background-color: #000;
+.fast {
+  -webkit-animation: move 25s infinite linear;
+  -moz-animation: move 25s infinite linear;
+  -ms-animation: move 25s infinite linear;
+  .cloud-1 {
+    top: 20px;
+  }
+  .cloud-2 {
+    left: 200px;
+    top: 280px;
+  }
+  .cloud-3 {
+    left: 600px;
+    top: 480px;
+  }
+  .cloud-4 {
+    top: 860px;
+  }
+  .cloud-5 {
+    left: 200px;
+    top: 1290px;
+  }
 }
 
-.story{
-  margin: 0 auto;
-  overflow: auto;
-  padding: 20px;
-  color: #fff;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 14px;
-  border:1px solid #fff;
+.slow {
+  -webkit-animation: move 60s infinite linear;
+  -moz-animation: move 60s infinite linear;
+  -ms-animation: move 60s infinite linear;
+  .cloud-1 {
+    top: 80px;
+  }
+  .cloud-2 {
+    left: 400px;
+    top: 130px;
+  }
+  .cloud-3 {
+    left: 120px;
+    top: 320px;
+  }
+  .cloud-4 {
+    left: 400px;
+    top: 620px;
+  }
+  .cloud-5 {
+    top: 940px;
+  }
+  .cloud-6 {
+    left: 400px;
+    top: 1600px;
+  }
+}
+
+@-webkit-keyframes move {
+  0% {left: -600px;}
+  100% {left: 2000px;}
+}
+
+@-moz-keyframes move {
+  0% {left: -600px;}
+  100% {left: 2000px;}
+}
+
+@-ms-keyframes move {
+  0% {left: -600px;}
+  100% {left: 2000px;}
+}
+
+
+
+.trex {
+  z-index: 0;
+  position: relative;
+  width: 638px;
+  left: 50%;
+
+  .image {
+    position: absolute;
+    top: -6px;
+    left: -346px;
+    background: url(../img/trex.png) no-repeat top center;
+    width: 693px;
+    height: 554px;
+  }
+}
+
+
+#main {
+  background:url(../img/building.png) no-repeat top center;
+  pointer-events: none;
+  height:4937px;
+  padding-top: 560px;
+  position: relative;
+  z-index: 50;
+
+  .content {
+    width:700px;
+    padding:10px;
+    margin: 0px auto;
+    background-color: rgba(0,0,0,0.8);
+  }
+  .content.intro {
+    margin-bottom: 1010px;
+  }
+  .content.explain {
+    margin-bottom: 600px;
+  }
+
+  .story {
+    margin: 0 auto;
+    overflow: auto;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    border:1px solid #fff;
+  }
+
+  .columns {
+    width: 1085px;
+    margin: 0 auto;
+
+    .content {
+      width:515px;
+
+      .story {
+        ul {
+          list-style-type:none;
+
+          li {
+            margin: 20px 0px 35px 0px;
+
+            .time {
+              font-size:11px;
+              color:rgba(255,255,255,0.7);
+              margin-bottom:7px;
+            }
+
+            &:last-child {
+
+              .time {
+                text-align:center;
+              }
+
+              .title {
+                font-size:30px;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// WindowPane code
+// DO NOT TOUCH UNLESS YOU KNOW WHAT YOU ARE DOING PLEASE
+// IT IS VERY MAGICAL
+
+#windowPanes {
+  background-color: #bbb;
+  position: absolute;
+  top: 860px;
+  left: 50%;
+  margin-left: -259px;
+  height: 3000px;
+  width: 603px;
+  .row {
+    height: 90px;
+    margin-bottom: 26px;
+    position: relative;
+    .pane {
+      height: 100%;
+      position: absolute;
+      $leftColWidth: 71px;
+      $leftColOffsetWidth: 91px;
+      $rightColWidth: 65px;
+      $rightColOffsetWidth: 83px;
+      &.col0, &.col1, &.col2 {
+        width: $leftColWidth;
+      }
+      &.col3, &.col4, &.col5, &.col6 {
+        width: $rightColWidth;
+      }
+      &.col0 {
+        left: 0;
+        top: 12px;
+      }
+      &.col1 {
+        left: $leftColOffsetWidth;
+        top: 6px;
+      }
+      &.col2 {
+        left: $leftColOffsetWidth * 2;
+        top: 0;
+      }
+      &.col3 {
+        right: $rightColOffsetWidth * 3;
+        top: 0;
+      }
+      &.col4 {
+        right: $rightColOffsetWidth * 2;
+        top: 4px;
+      }
+      &.col5 {
+        right: $rightColOffsetWidth;
+        top: 8px;
+      }
+      &.col6 {
+        right: 0;
+        top: 12px;
+      }
+    }
+  }
+}
+#paneContents {
+  display: none;
+}
+
+
+
+// Add all your windowPane addition stuff here!
+// Keep it organized if you can, but it's not that big a deal...
+
+#helloWorld {
+  font-family: monospace;
+  font-size: 12px;
+  text-align: center;
+  padding: 20px 0 0 2px;
+}
+
+#hatWobble {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  img {
+    margin-left: -30px;
+  }
+}
+
+.rampage {
+  background:url(../img/george.gif) no-repeat;
+  width: 300px;
+  height: 395px;
+  position: absolute;
+  left:-131px;
+  // top:1082px;
+  z-index:99;
+}
+
+.helicopter {
+  background-image: url("../img/helicopter.gif");
+  width: 67px;
+  height: 45px;
+  position: absolute;
+}
+
+#helicopter-0 {
+  position: absolute;
+  top: 300px;
+  left: 1200px;
+  z-index: 100;
+}
+
+#helicopter-1 {
+  position: absolute;
+  top: 400px;
+  left: 300px;
+}
+
+#helicopter-2 {
+  position: absolute;
+  z-index: -1;
+  top: 250px;
+  left: 800px;
+}
+
+.automatoon_wrapper {
+   z-index: 1000;
+}
+.tentacle {
+  position: absolute;
+  left: 50%;
+  margin-left: -216px;
+  z-index: 60;
+}
+.tentacle1 {
+  @extend .tentacle;
+  top: 1335px;
+  height: 600px;
+  width: 750px;
+  background: url("../img/tentacle1.png") no-repeat;
+}
+.tentacle2 {
+  @extend .tentacle;
+  top: 1335px;
+  height: 600px;
+  width: 750px;
+  background: url("../img/tentacle2.png") no-repeat;
+}
+.tentacle3 {
+  @extend .tentacle;
+  top: 1335px;
+  height: 600px;
+  width: 750px;
+  background: url("../img/tentacle3.png") no-repeat;
+}
+#scumbag-asteroid, #donkeycart, #cockroach {
+  cursor: pointer;
 }

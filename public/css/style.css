@@ -1,8 +1,13 @@
+html {
+  overflow-x: hidden; }
+
 body {
   margin: 0px auto;
   min-width: 980px;
-  padding-top: 30px;
-  background-color: #46bfee; }
+  padding-top: 50px;
+  background-color: #6fbcfe;
+  overflow-x: hidden;
+  position: relative; }
 
 p {
   margin: 0 0 20px 0;
@@ -15,7 +20,7 @@ h1, h2, h3 {
   color: #fff; }
 
 h1 {
-  font-size: 48px;
+  font-size: 60px;
   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1); }
 
 h2 {
@@ -36,25 +41,253 @@ h3 {
 #header {
   width: 100%; }
 
+.clouds {
+  position: relative;
+  z-index: -99; }
+  .clouds .big {
+    width: 104px;
+    height: 39px;
+    position: absolute;
+    background: url(../img/cloud_1.png) no-repeat; }
+  .clouds .small {
+    width: 169px;
+    height: 102px;
+    position: absolute;
+    background: url(../img/cloud_2.png) no-repeat; }
+
+.fast {
+  -webkit-animation: move 25s infinite linear;
+  -moz-animation: move 25s infinite linear;
+  -ms-animation: move 25s infinite linear; }
+  .fast .cloud-1 {
+    top: 20px; }
+  .fast .cloud-2 {
+    left: 200px;
+    top: 280px; }
+  .fast .cloud-3 {
+    left: 600px;
+    top: 480px; }
+  .fast .cloud-4 {
+    top: 860px; }
+  .fast .cloud-5 {
+    left: 200px;
+    top: 1290px; }
+
+.slow {
+  -webkit-animation: move 60s infinite linear;
+  -moz-animation: move 60s infinite linear;
+  -ms-animation: move 60s infinite linear; }
+  .slow .cloud-1 {
+    top: 80px; }
+  .slow .cloud-2 {
+    left: 400px;
+    top: 130px; }
+  .slow .cloud-3 {
+    left: 120px;
+    top: 320px; }
+  .slow .cloud-4 {
+    left: 400px;
+    top: 620px; }
+  .slow .cloud-5 {
+    top: 940px; }
+  .slow .cloud-6 {
+    left: 400px;
+    top: 1600px; }
+
+@-webkit-keyframes move {
+  0% {
+    left: -600px; }
+
+  100% {
+    left: 2000px; } }
+
+@-moz-keyframes move {
+  0% {
+    left: -600px; }
+
+  100% {
+    left: 2000px; } }
+
+@-ms-keyframes move {
+  0% {
+    left: -600px; }
+
+  100% {
+    left: 2000px; } }
+
+.trex {
+  z-index: 0;
+  position: relative;
+  width: 638px;
+  left: 50%; }
+  .trex .image {
+    position: absolute;
+    top: -6px;
+    left: -346px;
+    background: url(../img/trex.png) no-repeat top center;
+    width: 693px;
+    height: 554px; }
+
 #main {
-  background: #46bfee url(../img/building.png) no-repeat top center;
-  height: 5430px;
-  padding-top: 700px;
-  position: relative; }
+  background: url(../img/building.png) no-repeat top center;
+  pointer-events: none;
+  height: 4937px;
+  padding-top: 560px;
+  position: relative;
+  z-index: 50; }
+  #main .content {
+    width: 700px;
+    padding: 10px;
+    margin: 0px auto;
+    background-color: rgba(0, 0, 0, 0.8); }
+  #main .content.intro {
+    margin-bottom: 1010px; }
+  #main .content.explain {
+    margin-bottom: 600px; }
+  #main .story {
+    margin: 0 auto;
+    overflow: auto;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    border: 1px solid #fff; }
+  #main .columns {
+    width: 1085px;
+    margin: 0 auto; }
+    #main .columns .content {
+      width: 515px; }
+      #main .columns .content .story ul {
+        list-style-type: none; }
+        #main .columns .content .story ul li {
+          margin: 20px 0px 35px 0px; }
+          #main .columns .content .story ul li .time {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 7px; }
+          #main .columns .content .story ul li:last-child .time {
+            text-align: center; }
+          #main .columns .content .story ul li:last-child .title {
+            font-size: 30px;
+            text-align: center; }
 
-.content {
-  background: #fff;
-  width: 600px;
-  padding: 10px;
-  margin: 0px auto;
-  margin-bottom: 600px;
-  background-color: #000; }
+#windowPanes {
+  background-color: #bbb;
+  position: absolute;
+  top: 860px;
+  left: 50%;
+  margin-left: -259px;
+  height: 3000px;
+  width: 603px; }
+  #windowPanes .row {
+    height: 90px;
+    margin-bottom: 26px;
+    position: relative; }
+    #windowPanes .row .pane {
+      height: 100%;
+      position: absolute; }
+      #windowPanes .row .pane.col0, #windowPanes .row .pane.col1, #windowPanes .row .pane.col2 {
+        width: 71px; }
+      #windowPanes .row .pane.col3, #windowPanes .row .pane.col4, #windowPanes .row .pane.col5, #windowPanes .row .pane.col6 {
+        width: 65px; }
+      #windowPanes .row .pane.col0 {
+        left: 0;
+        top: 12px; }
+      #windowPanes .row .pane.col1 {
+        left: 91px;
+        top: 6px; }
+      #windowPanes .row .pane.col2 {
+        left: 182px;
+        top: 0; }
+      #windowPanes .row .pane.col3 {
+        right: 249px;
+        top: 0; }
+      #windowPanes .row .pane.col4 {
+        right: 166px;
+        top: 4px; }
+      #windowPanes .row .pane.col5 {
+        right: 83px;
+        top: 8px; }
+      #windowPanes .row .pane.col6 {
+        right: 0;
+        top: 12px; }
 
-.story {
-  margin: 0 auto;
-  overflow: auto;
-  padding: 20px;
-  color: #fff;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 14px;
-  border: 1px solid #fff; }
+#paneContents {
+  display: none; }
+
+#helloWorld {
+  font-family: monospace;
+  font-size: 12px;
+  text-align: center;
+  padding: 20px 0 0 2px; }
+
+#hatWobble {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  #hatWobble img {
+    margin-left: -30px; }
+
+.rampage {
+  background: url(../img/george.gif) no-repeat;
+  width: 300px;
+  height: 395px;
+  position: absolute;
+  left: -131px;
+  z-index: 99; }
+
+.helicopter {
+  background-image: url("../img/helicopter.gif");
+  width: 67px;
+  height: 45px;
+  position: absolute; }
+
+#helicopter-0 {
+  position: absolute;
+  top: 300px;
+  left: 1200px;
+  z-index: 100; }
+
+#helicopter-1 {
+  position: absolute;
+  top: 400px;
+  left: 300px; }
+
+#helicopter-2 {
+  position: absolute;
+  z-index: -1;
+  top: 250px;
+  left: 800px; }
+
+.automatoon_wrapper {
+  z-index: 1000; }
+
+.tentacle, .tentacle1 {
+  position: absolute; }
+
+.tentacle, .tentacle1, .tentacle2, .tentacle3 {
+  position: absolute;
+  left: 50%;
+  margin-left: -216px;
+  z-index: 60; }
+
+.tentacle1 {
+  top: 1335px;
+  height: 600px;
+  width: 750px;
+  background: url("../img/tentacle1.png") no-repeat; }
+
+.tentacle2 {
+  top: 1335px;
+  height: 600px;
+  width: 750px;
+  background: url("../img/tentacle2.png") no-repeat; }
+
+.tentacle3 {
+  top: 1335px;
+  height: 600px;
+  width: 750px;
+  background: url("../img/tentacle3.png") no-repeat; }
+
+#scumbag-asteroid, #donkeycart, #cockroach {
+  cursor: pointer; }
