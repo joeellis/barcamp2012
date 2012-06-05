@@ -29,8 +29,6 @@
         var gravity, t, x, y;
         t = ((new Date).getTime() - start) / 1000;
         gravity = 9.8;
-        x = what.offset().left;
-        y = $('body').height() - what.offset().top;
         x = startX + iOpts.v * Math.sin(iOpts.angle) * t;
         y = startY + (iOpts.v * Math.cos(iOpts.angle) + gravity * gravity * t * -1) * t;
         what.css('left', "" + x + "px");
