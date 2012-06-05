@@ -21,4 +21,4 @@ $.fn.galagable = (opts = {}) ->
   @
 
 $('.helicopter').galagable().click =>
-  @.trigger 'galaga'
+  @trigger 'galaga'
