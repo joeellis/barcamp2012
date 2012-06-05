@@ -148,7 +148,7 @@ automatoon_player = {};
       h = img.height();
       return img.css({
         left: ptgoal[0] - w / 2,
-        top: ptgoal[1] - h / 2 + top
+        top: ptgoal[1] - h / 2
       });
     }
   };
@@ -172,7 +172,7 @@ automatoon_player = {};
       img.css(browser_prefix + 'transform-origin', '0 0');
       img.css({
         display: 'none',
-        position: 'absolute'
+        position: 'fixed'
       });
       if (images != null) {
         image = images[image_id];
@@ -188,9 +188,9 @@ automatoon_player = {};
       _ref3 = morph_starts[_j], part_id = _ref3.part_id, image_id = _ref3.image_id, image_id_2 = _ref3.image_id_2, matrix_2 = _ref3.matrix_2, matrix = _ref3.matrix;
       _results.push(image_id_2 != null ? (image_id != null ? (img_tween = $('<img></img>'), img_tween.attr('id', 'automatoon_' + time + '_part_' + part_id + '_tween'), parent.append(img_tween), img_tween.addClass('part'), img_tween.addClass('automatoon_' + time), img_tween.css(browser_prefix + 'transform-origin', '0 0'), img_tween.css({
         display: 'none',
-        position: 'absolute'
+        position: 'fixed'
       }), tweens != null ? (tween = tweens[[part_id, image_id, image_id_2]].image, img_tween.attr('src', tween.get(0).toDataURL())) : img_tween.attr('src', directory + 'parts' + divider + part_id + divider + 'srcimages' + divider + image_id + divider + 'dstimages' + divider + image_id_2), set_transform(img_tween, matrix), enable_transition(img_tween)) : void 0, img_2 = $('<img></img>'), img_2.attr('id', 'automatoon_' + time + '_part_' + part_id + '_2'), img_2.addClass('automatoon_' + time), parent.append(img_2), img_2.css(browser_prefix + 'transform-origin', '0 0'), img_2.css({
-        position: 'absolute',
+        position: 'fixed',
         opacity: 0,
         display: 'none'
       }), images != null ? (image_2 = images[image_id_2], img_2.attr('src', image_2.get(0).toDataURL())) : img_2.attr('src', directory + 'images' + divider + image_id_2 + '.png'), set_transform(img_2, matrix_2), enable_transition(img_2)) : void 0);
@@ -338,6 +338,7 @@ automatoon_player = {};
     if (time === frames.length) {
       time = state.time = 0;
       parent.find('img').remove();
+      return stopped = true;
     }
     if (time === 0) {
       for (t = 0, _ref = frames.length; 0 <= _ref ? t < _ref : t > _ref; 0 <= _ref ? t++ : t--) {
@@ -389,7 +390,7 @@ automatoon_player = {};
     container.prepend(parent);
     zoom = wid / animation_width;
     parent.css({
-      position: 'absolute',
+      position: 'fixed',
       padding: 10,
       color: 'grey',
       '-webkit-transform': 'scale(' + zoom + ') ',
@@ -407,7 +408,6 @@ automatoon_player = {};
   safe_dirname = function(s) {
     return s.replace(/\ /g, '_');
   };
-  top = 0;
   automatoon_player.play = function(params, container) {
     var url;
     stopped = false;
@@ -416,8 +416,6 @@ automatoon_player = {};
         script: params
       };
     }
-    if (params.top) 
-        top = params.top;
     if (container != null) {
       params.container = container;
     }
@@ -442,17 +440,25 @@ automatoon_player = {};
 
 
 $(function(){
-  $('.automatoon_wrapper').hide();
   $("body").keydown(function(event) {
     if(event.which === 90) {
-      $('.automatoon_wrapper').hide();
-      automatoon_player.stop();
-      $('.automatoon_wrapper').show();
-      automatoon_player.play({script: 'swing', top: $(window).scrollTop() });
-      setTimeout(function(){ 
-        $('.automatoon_wrapper').hide();
-        automatoon_player.stop();
-      }, 5000);
+      automatoon_player.play('swing');
+    }
+  })
+})
+
+$(function(){
+  $("body").keydown(function(event) {
+    if(event.which === 74) {
+      automatoon_player.play('jetsons');
+    }
+  })
+})
+
+$(function(){
+  $("body").keydown(function(event) {
+    if(event.which === 83) {
+      automatoon_player.play('spiderman');
     }
   })
 })
