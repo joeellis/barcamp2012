@@ -288,3 +288,7 @@ h3 {
 
 #scumbag-asteroid, #donkeycart, #cockroach {
   cursor: pointer; }
+
+#sam-max-3 img {
+  height: 90px;
+  margin-left: -50px; }
