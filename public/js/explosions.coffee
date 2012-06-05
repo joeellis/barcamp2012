@@ -12,7 +12,6 @@ $.fn.explode = (opts = {}) ->
     what.css('-moz-transform', 'rotate(' + r + 'deg)')
 
   __explode = (iOpts) ->
-    console.log iOpts
     $('body').append @
     @show()
     startX = iOpts.startX
@@ -64,7 +63,6 @@ $.fn.explode = (opts = {}) ->
 
   $.extend(defaults, opts)
   opts = defaults
-  console.log opts
   images = []
   # preload images
   $.each opts.images, (index, image) ->
