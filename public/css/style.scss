@@ -332,13 +332,14 @@ h3 {
   width: 67px;
   height: 45px;
   position: absolute;
+  z-index: 100;
+  cursor: pointer;
 }
 
 #helicopter-0 {
   position: absolute;
   top: 300px;
   left: 1200px;
-  z-index: 100;
 }
 
 #helicopter-1 {
@@ -349,7 +350,6 @@ h3 {
 
 #helicopter-2 {
   position: absolute;
-  z-index: -1;
   top: 250px;
   left: 800px;
 }
@@ -385,6 +385,29 @@ h3 {
   background: url("../img/tentacle3.png") no-repeat;
 }
 #scumbag-asteroid, #donkeycart, #cockroach {
+  cursor: pointer;
+}
+
+#sam-max-3 {
+  img {
+    height: 90px;
+    margin-left: -50px;
+  }
+}
+
+.blinds-wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.blinds {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
   cursor: pointer;
 }
 

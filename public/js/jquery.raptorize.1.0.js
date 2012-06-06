@@ -41,7 +41,8 @@
 				"position":"fixed",
 				"bottom": "-700px",
 				"right" : "0",
-				"display" : "block"
+				"display" : "block",
+				"z-index" : "99999"
 			})
 			
 			// Animating Code
@@ -70,7 +71,7 @@
 							raptor = $('#elRaptor').css({
 								"bottom": "-700px",
 								"right" : "0",
-								"z-index": "1000"
+								"z-index": "99999"
 							})
 							locked = false;
 						})
