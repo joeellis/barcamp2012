@@ -309,3 +309,20 @@ h3 {
 
 .pterodactyl_wrapper {
   z-index: -100; }
+
+#pane-5-4 {
+  background-color: purple; }
+  #pane-5-4 #small-trex {
+    padding-top: 10px;
+    cursor: pointer; }
+
+#pane-5-5 {
+  background-color: green; }
+  #pane-5-5 #utahraptor {
+    padding-top: 10px;
+    cursor: pointer; }
+
+#pane-5-6 {
+  background-color: yellow; }
+  #pane-5-6 #labdog {
+    cursor: pointer; }

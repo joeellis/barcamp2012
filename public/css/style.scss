@@ -412,5 +412,25 @@ h3 {
 }
 
 .pterodactyl_wrapper {
- z-index: -100;                     
+ z-index: -100;
+}
+#pane-5-4 {
+  background-color: purple;
+  #small-trex {
+    padding-top: 10px;
+    cursor: pointer;
+  }
+}
+#pane-5-5 {
+  background-color: green;
+  #utahraptor {
+    padding-top: 10px;
+    cursor: pointer;
+  }
+}
+#pane-5-6 {
+  background-color: yellow;
+  #labdog {
+    cursor: pointer;
+  }
 }
