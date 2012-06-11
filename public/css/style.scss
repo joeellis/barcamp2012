@@ -457,3 +457,59 @@ h3 {
     background: url(../img/sq-bg.png) no-repeat -70px center;
   }
 }
+
+.wilco {
+  width: 28px;
+  height: 66px;
+  background-image: url(../img/wilco.png);
+  background-repeat: no-repeat;
+}
+
+// text only game
+#text-entry {
+  padding: 20px 5%;
+  width: 90%;
+  background: black;
+  background-color: rgba(0,0,0,0.85);
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  z-index: 1000;
+  color: #fff;
+  font-family: 'Courier New', Courier, 'Andale Mono', monospace;
+  font-weight: bold;
+  font-size: 20px;
+
+  input {
+    -webkit-appearance: none;
+    background: none;
+    color: #fff;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    font-family: 'Courier New', Courier, 'Andale Mono', monospace;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 1%;
+    width: 96%;
+  }
+}
+
+#message-box {
+  width: 100%;
+  //height: 100%;
+  top: 50%;
+  left: 0;
+  position: absolute;
+  z-index: 10000;
+  text-align: center;
+
+  .message-body {
+    width: 400px;
+    background: #fff;
+    background-color: rgba(255,255,255,0.9);
+    margin: 0 auto;
+  }
+}

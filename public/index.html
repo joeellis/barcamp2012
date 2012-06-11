@@ -159,6 +159,7 @@
     <div class="content">
       <div class="inner">
         <img src="img/sq.gif"/>
+        <div class="wilco"></div>
       </div>
       <div class="inner"></div>
     </div>
@@ -228,6 +229,20 @@
 
 </footer>
 
+<div id="text-entry">><input id="entryField" type="text" value="_"/></div>
+<div id="message-box"><div class="message-body"><p>test message</p></div></div>
+
+<!--
+text-game.js will automatically pick up these divs and bind them
+to the specified data-keywords attribute. Separate each keyword with a space
+if multiple keywords or a phrase is required, link them together with + signs
+-->
+<div id="messages">
+  <div data-keywords="blow+up+helicopters blow+up+helicoptors" data-function="blowUpHelicopters"></div>
+  <div data-keywords="helicopter helicoptor" data-function="blowUpHelicopter"></div>
+  <div data-keywords="dino dinosaur"></div>
+</div>
+
 <script src="js/libs/jquery-1.7.2.min.js"></script>
 
 <script src="js/plugins.js"></script>
@@ -245,6 +260,7 @@
 <script src="js/pterodactyl_player.js"></script>
 <script src="js/magnify.js"></script>
 <script src="js/blinds.js"></script>
+<script src="js/text-game.js"></script>
 <script src="js/galaga.js"></script>
 
 
