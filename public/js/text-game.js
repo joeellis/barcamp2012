@@ -52,7 +52,6 @@ window.textGame = {
       }
       $.each(words, function(t, word){
         if ( $.inArray(word, command) !== -1) {
-          console.log(word);
           self.getFunction( self.commands[i]['function'] );
         }
       });
@@ -66,14 +65,10 @@ window.textGame = {
       self.commands.push( keywords );
       self.commands[i]['function'] = $(this).data('function');
     });
-    console.log(this.commands);
   },
   getFunction: function( callback ) {
     if ( callback ) {
       $(document)[callback].call();
-    }
-    else {
-      console.log('no such function');
     }
   }
 };
