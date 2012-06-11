@@ -361,7 +361,7 @@ h3 {
   position: fixed;
   bottom: 0px;
   left: 0px;
-  z-index: 1000;
+  z-index: 100000;
   color: #fff;
   font-family: 'Courier New', Courier, 'Andale Mono', monospace;
   font-weight: bold;
@@ -383,13 +383,23 @@ h3 {
 
 #message-box {
   width: 100%;
+  height: 100%;
   top: 50%;
   left: 0;
-  position: absolute;
+  position: fixed;
   z-index: 10000;
   text-align: center; }
   #message-box .message-body {
-    width: 400px;
+    width: 450px;
+    padding: 25px;
+    outline: 5px solid #fff;
+    border: 2px solid #c1272d;
     background: #fff;
-    background-color: rgba(255, 255, 255, 0.9);
-    margin: 0 auto; }
+    background-color: rgba(255, 255, 255, 0.97);
+    margin: 0 auto;
+    font-family: 'Courier New', Courier, 'Andale Mono', monospace;
+    font-weight: bold; }
+    #message-box .message-body p {
+      font-size: 20px;
+      margin: 10px 0px;
+      padding: 0px; }

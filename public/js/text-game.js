@@ -6,13 +6,31 @@ $.fn.blowUpHelicopter = function() {
   $('.helicopter').first().click();
 };
 
+$.fn.killRoach = function() {
+  $('#cockroach').click();
+};
+
+$.fn.killScumbagAsteroid = function() {
+  $('#scumbag-asteroid').click();
+};
+
+$.fn.playMario = function() {
+  $('a#bario').click();
+};
+
+$.fn.reposition = function() {
+  var marginTop = $(this).outerHeight() / 2;
+  return $(this).css({'margin-top':  -marginTop });;
+};
+
 window.textGame = {
   init: function() {
-    this.input = "#entryField";
-    this.bindInput( $(this.input) );
+    this.inputField = $("#entryField");
+    this.messageBox = $(".message-body");
 
     this.bindCommands();
-    //this.helicoptor = this.blowUpHelicoptors();
+    this.bindInput( this.inputField );
+    this.bindCloseBox( this.messageBox );
   },
   bindInput: function($input) {
     var self = this;
@@ -35,7 +53,7 @@ window.textGame = {
     })
     .keyup(function(e){
       if (e.which === 13 && $(this).data("hasfocus")) {
-        self.submitCommand( $(this).val() );
+        self.submitCommand( $(this).val().toLowerCase() );
         $(this).val('');
       }
     });
@@ -48,28 +66,48 @@ window.textGame = {
     $.each(self.commands, function(i, command) {
       if ( $.inArray(phrase, command) !== -1) {
         self.getFunction( self.commands[i]['function'] );
+        self.getContents( self.commands[i]['el'] );
         return false;
       }
-      $.each(words, function(t, word){
-        if ( $.inArray(word, command) !== -1) {
-          self.getFunction( self.commands[i]['function'] );
-        }
-      });
+      else {
+        $.each(words, function(t, word){
+          if ( $.inArray(word, command) !== -1) {
+            self.getFunction( self.commands[i]['function'] );
+            self.getContents( self.commands[i]['el'] );
+          }
+        });
+      }
     });
   },
   bindCommands: function() {
     this.commands = [];
     var self = this;
-    $( $('#messages').children() ).each(function(i){
-      var keywords = $(this).data('keywords').split(" ");
+    $('#messages').children().each(function(i, el){
+      var keywords = $(this).data('keywords').toLowerCase().split(" ");
       self.commands.push( keywords );
       self.commands[i]['function'] = $(this).data('function');
+      self.commands[i]['el'] = $(el).children() ;
     });
   },
   getFunction: function( callback ) {
     if ( callback ) {
+      [callback];
       $(document)[callback].call();
     }
+  },
+  getContents: function( $el ) {
+    if ( $el.length > 0  ) {
+      this.displayContent( $el );
+    }
+  },
+  displayContent: function( $content ) {
+    this.messageBox.html( $content ).reposition().fadeIn(100);
+
+  },
+  bindCloseBox: function( box ) {
+    $(box).click(function(){
+      $(this).fadeOut(100);
+    }).hide();
   }
 };
 

@@ -229,18 +229,23 @@
 
 </footer>
 
-<div id="text-entry">><input id="entryField" type="text" value="_"/></div>
+<div id="text-entry" title="What? You haven't played a text-based game before? Well, try typing stuff in this input bar and hit enter... stuff like 'blow up helicopter' or something.">><input id="entryField" type="text" value="_"/></div>
 <div id="message-box"><div class="message-body"><p>test message</p></div></div>
 
 <!--
 text-game.js will automatically pick up these divs and bind them
 to the specified data-keywords attribute. Separate each keyword with a space
-if multiple keywords or a phrase is required, link them together with + signs
+for complete phrases link words together with + signs
 -->
 <div id="messages">
   <div data-keywords="blow+up+helicopters blow+up+helicoptors" data-function="blowUpHelicopters"></div>
   <div data-keywords="helicopter helicoptor" data-function="blowUpHelicopter"></div>
-  <div data-keywords="dino dinosaur"></div>
+  <div data-keywords="play+mario mario" data-function="playMario"></div>
+  <div data-keywords="slap+cockroach kill+roach smack+roach kill+cockroach" data-function="killRoach"></div>
+  <div data-keywords="scumbag+asteroid destroy+asteroid smack+scumbag kill+scumbag" data-function="killScumbagAsteroid"></div>
+  <div data-keywords="look+at+dinosaur dino dinosaur">
+    <p>You probably don't want to do that. He has a spear. What do you have? That's what I thought.</p>
+  </div>
 </div>
 
 <script src="js/libs/jquery-1.7.2.min.js"></script>
