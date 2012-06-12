@@ -1,10 +1,9 @@
 $ ->
-	window.$ptero = $('<img src="img/pteroRedactyl.png">').css
+	window.$ptero = $('<img src="img/ptero-redactyl.png">').css
 			position: 'absolute'
-			width: 250
-			height: 150
+			width: 300
+			height: 163
 			'z-index': 99999
-			'background-color': 'green'
 
 
 	$body = $('body')

@@ -3,12 +3,11 @@
 
   $(function() {
     var $body;
-    window.$ptero = $('<img src="img/pteroRedactyl.png">').css({
+    window.$ptero = $('<img src="img/ptero-redactyl.png">').css({
       position: 'absolute',
-      width: 250,
-      height: 150,
-      'z-index': 99999,
-      'background-color': 'green'
+      width: 300,
+      height: 163,
+      'z-index': 99999
     });
     $body = $('body');
     return $body.on('keypress', function(e) {
