@@ -8,29 +8,50 @@ $ ->
 
 	$body = $('body')
 
-	$body.on 'keypress', (e) ->
-		return if not (/r/i).test String.fromCharCode e.which
+	caw = ((el)-> -> el.play&&el.play()) $('<audio id="ptero-caw" preload="auto"><source src="sounds/ptero-redactyl.mp3" /></audio>')
+				.appendTo($body)[0]
+	sratch = ((el)-> -> el.play&&el.play()) $('<audio id="ptero-redaction" preload="auto"><source src="sounds/redaction.mp3" /></audio>')
+				.appendTo($body)[0]
 
-		console.log "ptero-redactyl!"
+	pteroRedacting = false
+
+	$body.on 'mousedown', (e) ->
+		return if not e.ctrlKey
+		return if pteroRedacting
+
+		pteroRedacting = true
+
 		minT = $body.scrollTop()
 		maxT = minT + $(window).height() - $ptero.height()
 
-		$ptero.css left: 0, top: (Math.floor ( (Math.random() * (maxT-minT)) + minT ) )
+		redaction = x: e.pageX-10, y: e.pageY-10
+		$ptero.css 
+			left: 0
+			top: redaction.y - 75
 		$ptero.appendTo 'body'
 		$redaction = $('<div class="redaction">').css
 			position: 'absolute'
 			'z-index': 99998
-			'background-color': 'black'
-			height: 50
+			'background-image': 'url(img/redaction.png)'
+			'background-position': Math.floor(500*Math.random())+'px 0'
+			left:  redaction.x
+			top: redaction.y
+			height: 43
 			width: 0
+		$redaction.appendTo 'body'
+		
+		$ptero
+			.animate( (left: redaction.x, top: redaction.y), (duration: 800) )
+			.animate (left: $(window).width()), 
+				duration: 2000
+				step: ->
+					redactionWidth = $(@).position().left - redaction.x
+					$redaction.width redactionWidth
+					$redaction.toggle redactionWidth > 0  
+				complete: ->
+					$ptero.css left: 0
+					$ptero.detach()
+					setTimeout (-> $redaction.fadeOut 'slow'), 2000
+					pteroRedacting = false
 
-		$redaction.css(top: $ptero.position().top, left: $ptero.position().left).appendTo 'body'
-		$ptero.animate (left: $(window).width()), 
-			duration: 2000
-			step: ->
-				$redaction.width $(@).position().left
-				console.log 'step', @, arguments
-			complete: ->
-				$ptero.css left: 0
-				$ptero.detach()
-				setTimeout (-> $redaction.fadeOut 'slow'), 2000
+		caw()
