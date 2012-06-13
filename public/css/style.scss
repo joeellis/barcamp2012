@@ -18,7 +18,7 @@ p{
   line-height: 26px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: 'Press Start 2P', cursive;
   text-transform: uppercase;
   text-align: center;
@@ -37,6 +37,19 @@ h2 {
 
 h3 {
   font-size: 28px;
+}
+
+h4 {
+  font-size: 50px;
+
+  a {
+    text-decoration: none;
+    color: red;
+
+    &:visited {
+      color:red;
+    }
+  }
 }
 
 
@@ -145,6 +158,22 @@ h3 {
 
 
 
+
+
+@-webkit-keyframes blink {  
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+
+.blink {
+  -webkit-animation-name: blink;  
+  -webkit-animation-iteration-count: infinite;  
+  -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+  -webkit-animation-duration: 1s; 
+}
+
+
+
 .trex {
   z-index: 0;
   position: relative;
@@ -239,7 +268,7 @@ h3 {
 #windowPanes {
   background-color: #bbb;
   position: absolute;
-  top: 860px;
+  top: 1035px;
   left: 50%;
   margin-left: -259px;
   height: 3000px;
