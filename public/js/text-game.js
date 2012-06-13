@@ -27,6 +27,7 @@ window.textGame = {
   init: function() {
     this.inputField = $("#entryField");
     this.messageBox = $(".message-body");
+    $('#text-entry').hide();
 
     this.bindCommands();
     this.bindInput( this.inputField );
@@ -101,10 +102,19 @@ window.textGame = {
     }
   },
   displayContent: function( $content ) {
-    this.messageBox.html( $content ).reposition().fadeIn(100);
-
+    this.messageBox.fadeOut().html( $content ).reposition().fadeIn(100);
+    this.bindEnter();
+  },
+  bindEnter: function() {
+    var self = this;
+    $('body').keydown(function(e){
+      if (e.which === 13) {
+        $(self.messageBox).click();
+      }
+    });
   },
   bindCloseBox: function( box ) {
+    var self = this;
     $(box).click(function(){
       $(this).fadeOut(100);
     }).hide();
@@ -112,6 +122,18 @@ window.textGame = {
 };
 
 $(document).ready(function() {
+  $('body').keyup(function(e){
+    if (e.which === 192) {
+      $('#text-entry').show().find('input').focus();      
+    }
+    else if (e.which === 27) {
+      $('#text-entry input').blur().closest('#text-entry').hide();
+    }
+  });
+
+  $('.rampage, #underground').click(function(){
+    $('#text-entry').show().find('input').focus();      
+  });
   return textGame.init();
 });
 

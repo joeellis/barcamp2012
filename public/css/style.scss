@@ -441,6 +441,8 @@ h3 {
   height: 412px;
   bottom: 400px;
   left: 0px;
+  pointer-events: auto;
+  z-index: 10000;
   .content {
     width: 800px;
     background-color: transparent;
@@ -449,6 +451,7 @@ h3 {
   .inner {
     overflow:hidden;
     position: absolute;
+    cursor: pointer;
     width: 570px;
     height: 333px;
     right: 0px;
@@ -495,6 +498,10 @@ h3 {
     margin: 0 1%;
     width: 96%;
   }
+}
+
+#messages {
+  display: none;
 }
 
 #message-box {
