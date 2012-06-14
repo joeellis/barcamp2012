@@ -156,6 +156,16 @@
     </section>
   </div>
 
+  <div id="underground">
+    <div class="content">
+      <div class="inner">
+        <img src="img/sq.gif"/>
+        <div class="wilco"></div>
+      </div>
+      <div class="inner"></div>
+    </div>
+  </div>
+
   <!--
   window_accessor.js will automatically pick up these divs and stuff them
   into the appropriate window pane, based on the data-pane-id attribute.
@@ -220,6 +230,28 @@
 
 </footer>
 
+<div id="text-entry" title="What? You haven't played a text-based game before? Well, try typing stuff in this input bar and hit enter... stuff like 'blow up helicopter' or something.">><input id="entryField" type="text" value="_"/></div>
+<div id="message-box"><div class="message-body"><p>test message</p></div></div>
+
+<!--
+text-game.js will automatically pick up these divs and bind them
+to the specified data-keywords attribute. Separate each keyword with a space
+for complete phrases link words together with + signs
+-->
+<div id="messages">
+  <div data-keywords="blow+up+helicopters blow+up+helicoptors" data-function="blowUpHelicopters"></div>
+  <div data-keywords="helicopter helicoptor" data-function="blowUpHelicopter"></div>
+  <div data-keywords="play+mario mario" data-function="playMario"></div>
+  <div data-keywords="slap+cockroach kill+roach smack+roach kill+cockroach" data-function="killRoach"></div>
+  <div data-keywords="scumbag+asteroid destroy+asteroid smack+scumbag kill+scumbag" data-function="killScumbagAsteroid"></div>
+  <div data-keywords="look+at+dinosaur dino dinosaur">
+    <p>You probably don't want to do that. He has a spear. What do you have? That's what I thought.</p>
+  </div>
+  <div data-keywords="look+at pick+up touch walk">
+    <p>Had you actually done that, you would be rendered an inert, lifeless sad sack.</p>
+  </div>  
+</div>
+
 <script src="js/libs/jquery-1.7.2.min.js"></script>
 
 <script src="js/plugins.js"></script>
@@ -237,6 +269,7 @@
 <script src="js/pterodactyl_player.js"></script>
 <script src="js/magnify.js"></script>
 <script src="js/blinds.js"></script>
+<script src="js/text-game.js"></script>
 <script src="js/galaga.js"></script>
 <script src="js/ptero-redactyl.js"></script>
 
