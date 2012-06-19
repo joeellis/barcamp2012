@@ -131,6 +131,7 @@ h4 {
     opacity: 0.0; } }
 
 .blink {
+  z-index: 99999;
   -webkit-animation-name: blink;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
