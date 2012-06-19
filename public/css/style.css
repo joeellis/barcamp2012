@@ -22,7 +22,7 @@ h1, h2, h3, h4 {
     text-decoration: underline;
     color: #fff; }
     h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited {
-      color: fff; }
+      color: #fff; }
 
 h1 {
   font-size: 60px;
