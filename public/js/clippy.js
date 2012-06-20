@@ -340,6 +340,10 @@ clippy.Agent.prototype = {
         this._el.on('mousedown', $.proxy(this._onMouseDown, this));
 
         this._el.on('dblclick', $.proxy(this._onDoubleClick, this));
+
+        this._el.on('click', function() {
+          window.location = "http://barcampnola5.eventbrite.com"
+        })
     },
 
     _onDoubleClick:function () {
