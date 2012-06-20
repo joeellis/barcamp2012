@@ -19,7 +19,7 @@
       return function() {
         return el.play && el.play();
       };
-    })($('<audio id="ptero-redaction" preload="auto"><source src="sounds/redaction.mp3" /></audio>').appendTo($body)[0]);
+    })($('<audio id="ptero-redaction" preload="auto"><source src="sounds/ptero-redactyl.mp3" /><source src="sounds/ptero_redactyl.ogg" /></audio>').appendTo($body)[0]);
     pteroRedacting = false;
     return $body.on('mousedown', function(e) {
       var $redaction, maxT, minT, redaction;

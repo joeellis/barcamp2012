@@ -10,7 +10,7 @@ $ ->
 
 	caw = ((el)-> -> el.play&&el.play()) $('<audio id="ptero-caw" preload="auto"><source src="sounds/ptero-redactyl.mp3" /></audio>')
 				.appendTo($body)[0]
-	sratch = ((el)-> -> el.play&&el.play()) $('<audio id="ptero-redaction" preload="auto"><source src="sounds/redaction.mp3" /></audio>')
+	sratch = ((el)-> -> el.play&&el.play()) $('<audio id="ptero-redaction" preload="auto"><source src="sounds/ptero-redactyl.mp3" /><source src="sounds/ptero_redactyl.ogg" /></audio>')
 				.appendTo($body)[0]
 
 	pteroRedacting = false
