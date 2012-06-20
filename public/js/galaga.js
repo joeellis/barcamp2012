@@ -12,7 +12,7 @@
       var self,
         _this = this;
       self = $(this);
-      return self.click(function() {
+      return self.on('galaga', function() {
         var width;
         width = self.width();
         self.css('backgroundImage', 'none');
@@ -27,6 +27,10 @@
     return this;
   };
 
-  $('.helicopter').galagable();
+  $(function() {
+    return $('.helicopter, #utahraptor, #small-trex, #labdog').galagable().click(function() {
+      return $(this).trigger('galaga');
+    });
+  });
 
 }).call(this);
