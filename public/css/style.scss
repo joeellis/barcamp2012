@@ -1,80 +1,3 @@
-// Main stuff plus details - leave alone if you can
-
-html {
-  overflow-x:hidden;
-}
-
-body{
-  margin: 0px auto;
-  min-width: 980px;
-  padding-top: 50px;
-  background-color: #6fbcfe;
-  overflow-x:hidden;
-  position: relative;
-}
-
-p{
-  margin: 0 0 20px 0;
-  line-height: 26px;
-}
-
-h1, h2, h3, h4 {
-  font-family: 'Press Start 2P', cursive;
-  text-transform: uppercase;
-  text-align: center;
-  color: #fff;
-
-  a {
-    text-decoration: underline;
-    color: #fff;
-
-    &:visited {
-      color:#fff;
-    }
-  }
-}
-
-h1 {
-  font-size: 60px;
-  text-shadow: 0px 5px 5px rgba(0,0,0,0.1);
-}
-
-h2 {
-  font-size: 35px;
-  text-shadow: 0px 5px 5px rgba(0,0,0,0.1);
-}
-
-h3 {
-  font-size: 28px;
-}
-
-h4 {
-  font-size: 50px;
-
-  a {
-    text-decoration: underline;
-    color: red;
-
-    &:visited {
-      color:red;
-    }
-  }
-}
-
-
-#nav{
-  list-style: none;
-  position: fixed;
-  right: 20px;
-}
-
-#nav li{
-  margin: 0 0 15px 0;
-}
-
-#header {
-  width: 100%;
-}
 
 
 // Clouds
@@ -269,72 +192,6 @@ h4 {
     }
   }
 }
-
-
-// WindowPane code
-// DO NOT TOUCH UNLESS YOU KNOW WHAT YOU ARE DOING PLEASE
-// IT IS VERY MAGICAL
-
-#windowPanes {
-  background-color: #bbb;
-  position: absolute;
-  top: 1035px;
-  left: 50%;
-  margin-left: -259px;
-  height: 3000px;
-  width: 603px;
-  .row {
-    height: 90px;
-    margin-bottom: 26px;
-    position: relative;
-    .pane {
-      height: 100%;
-      position: absolute;
-      $leftColWidth: 71px;
-      $leftColOffsetWidth: 91px;
-      $rightColWidth: 65px;
-      $rightColOffsetWidth: 83px;
-      &.col0, &.col1, &.col2 {
-        width: $leftColWidth;
-      }
-      &.col3, &.col4, &.col5, &.col6 {
-        width: $rightColWidth;
-      }
-      &.col0 {
-        left: 0;
-        top: 12px;
-      }
-      &.col1 {
-        left: $leftColOffsetWidth;
-        top: 6px;
-      }
-      &.col2 {
-        left: $leftColOffsetWidth * 2;
-        top: 0;
-      }
-      &.col3 {
-        right: $rightColOffsetWidth * 3;
-        top: 0;
-      }
-      &.col4 {
-        right: $rightColOffsetWidth * 2;
-        top: 4px;
-      }
-      &.col5 {
-        right: $rightColOffsetWidth;
-        top: 8px;
-      }
-      &.col6 {
-        right: 0;
-        top: 12px;
-      }
-    }
-  }
-}
-#paneContents {
-  display: none;
-}
-
 
 
 // Add all your windowPane addition stuff here!
@@ -569,3 +426,155 @@ h4 {
     }
   }
 }
+
+
+
+
+
+
+
+// Site structure code - HERE BE DRAGONS 
+
+html {
+  overflow-x:hidden;
+}
+
+body{
+  margin: 0px auto;
+  min-width: 980px;
+  padding-top: 50px;
+  background-color: #6fbcfe;
+  overflow-x:hidden;
+  position: relative;
+}
+
+p{
+  margin: 0 0 20px 0;
+  line-height: 26px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+
+  a {
+    text-decoration: underline;
+    color: #fff;
+
+    &:visited {
+      color:#fff;
+    }
+  }
+}
+
+h1 {
+  font-size: 60px;
+  text-shadow: 0px 5px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+  font-size: 35px;
+  text-shadow: 0px 5px 5px rgba(0,0,0,0.1);
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 50px;
+
+  a {
+    text-decoration: underline;
+    color: red;
+
+    &:visited {
+      color:red;
+    }
+  }
+}
+
+
+#nav{
+  list-style: none;
+  position: fixed;
+  right: 20px;
+}
+
+#nav li{
+  margin: 0 0 15px 0;
+}
+
+#header {
+  width: 100%;
+}
+
+
+
+// WindowPane code
+// DO NOT TOUCH UNLESS YOU KNOW WHAT YOU ARE DOING PLEASE
+// IT IS VERY MAGICAL
+
+#windowPanes {
+  background-color: #bbb;
+  position: absolute;
+  top: 1035px;
+  left: 50%;
+  margin-left: -259px;
+  height: 3000px;
+  width: 603px;
+  .row {
+    height: 90px;
+    margin-bottom: 26px;
+    position: relative;
+    .pane {
+      height: 100%;
+      position: absolute;
+      $leftColWidth: 71px;
+      $leftColOffsetWidth: 91px;
+      $rightColWidth: 65px;
+      $rightColOffsetWidth: 83px;
+      &.col0, &.col1, &.col2 {
+        width: $leftColWidth;
+      }
+      &.col3, &.col4, &.col5, &.col6 {
+        width: $rightColWidth;
+      }
+      &.col0 {
+        left: 0;
+        top: 12px;
+      }
+      &.col1 {
+        left: $leftColOffsetWidth;
+        top: 6px;
+      }
+      &.col2 {
+        left: $leftColOffsetWidth * 2;
+        top: 0;
+      }
+      &.col3 {
+        right: $rightColOffsetWidth * 3;
+        top: 0;
+      }
+      &.col4 {
+        right: $rightColOffsetWidth * 2;
+        top: 4px;
+      }
+      &.col5 {
+        right: $rightColOffsetWidth;
+        top: 8px;
+      }
+      &.col6 {
+        right: 0;
+        top: 12px;
+      }
+    }
+  }
+}
+#paneContents {
+  display: none;
+}
+
+
