@@ -1027,7 +1027,7 @@ clippy.Queue.prototype = {
 $(function() {
   clippy.load('Clippy', function(agent) {
       agent.show();
-      agent.speak('Would you like help? My name is Clippy.');
+      agent.speak("It looks like you're trying to register for a BarCampNola event. Would you like help?  My name is Clippy.");
       agent.play('SendMail');
       agent.speak('Do not forget to RAWRGISTER above!');
       agent.play('GestureUp');
